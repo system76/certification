@@ -2,6 +2,8 @@
 
 A collection of automated and manual processes to ensure the delivery of a quality Ubuntu machine.
 
+---
+
 ## Rationale
 
 We would like to, for production and engineering reasons, have a set of automated and manual procedures that can be collected with as little user input as possible to identify product issues.
@@ -9,6 +11,8 @@ We would like to, for production and engineering reasons, have a set of automate
 For support reasons, we would like to have a set of tests that support staff can use to identify potential issues with hardware in the field.
 
 For marketing reasons, we would like to have more information to offer potential customers about the effectiveness of our machines.
+
+---
 
 ## High Level Concepts
 
@@ -27,6 +31,8 @@ Upon product release, we should be able to publish the results of our test in a 
 ### Product Maintenance
 
 When we handle support issues, we should refer to collected test information, and be able to reproduce test results on machines in the field, or in the RMA process.
+
+---
 
 ## Low Level Implementation
 
@@ -61,6 +67,8 @@ We should have sanity testing to identify lemons before shipping them.
 ### User-Generated Results
 
 We should allow users to run this test tool and produce their own test results.
+
+---
 
 ## Possible Development Process
 
