@@ -2,7 +2,7 @@
 
 A collection of automated and manual processes to ensure the delivery of a quality Ubuntu machine.
 
----
+<div style="page-break-after: always;"></div>
 
 ## Rationale
 
@@ -12,7 +12,7 @@ For support reasons, we would like to have a set of tests that support staff can
 
 For marketing reasons, we would like to have more information to offer potential customers about the effectiveness of our machines.
 
----
+<div style="page-break-after: always;"></div>
 
 ## High Level Concepts
 
@@ -32,7 +32,7 @@ Upon product release, we should be able to publish the results of our test in a 
 
 When we handle support issues, we should refer to collected test information, and be able to reproduce test results on machines in the field, or in the RMA process.
 
----
+<div style="page-break-after: always;"></div>
 
 ## Low Level Implementation
 
@@ -68,7 +68,7 @@ We should have sanity testing to identify lemons before shipping them.
 
 We should allow users to run this test tool and produce their own test results.
 
----
+<div style="page-break-after: always;"></div>
 
 ## Possible Development Process
 
