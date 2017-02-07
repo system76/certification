@@ -61,3 +61,14 @@ We should have sanity testing to identify lemons before shipping them.
 ### User-Generated Results
 
 We should allow users to run this test tool and produce their own test results.
+
+## Possible Development Process
+
+- Create a result collection client for some simple, automatable tests and benchmarks.
+- Create a server to host results, per product line (Oryx Pro), and model (8156)
+- Create an ugly user interface for test results
+- Create a method of discovering present hardware, and adding to the result recommendations for benchmarks and tests.
+- Improve upon the number of tests to include the most useful ones
+- Create a pretty user interface for test results
+- Create a comparison method for test results
+- Publicize this new certification framework
