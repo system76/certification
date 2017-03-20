@@ -12,7 +12,9 @@ nested_part:
 include:
     system76/automated/.*
 exclude:
+    2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::memory/check
+    2013.com.canonical.certification::suspend/record_playback_after_suspend_auto
 
 unit: job
 id: system76/automated/always-pass
