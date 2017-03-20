@@ -29,28 +29,25 @@ type = silent
 [exporter:html]
 unit = 2013.com.canonical.plainbox::html
 
-[exporter:json]
-unit = 2013.com.canonical.plainbox::json
-
-[exporter:text]
-unit = 2013.com.canonical.plainbox::text
+[exporter:tar]
+unit = 2013.com.canonical.plainbox::tar
 
 [transport:html]
 type = file
 path = report.html
 
-[transport:json]
+[transport:tar]
 type = file
-path = report.json
+path = report.tar
 
 [report:html]
 exporter = html
 transport = html
 forced = yes
 
-[report:json]
-exporter = json
-transport = json
+[report:tar]
+exporter = tar
+transport = tar
 forced = yes
 EOF
 
