@@ -12,7 +12,7 @@ nested_part:
 include:
     system76/automated/.*
 exclude:
-    memory/check
+    2013.com.canonical.certification::memory/check
 
 unit: job
 id: system76/automated/always-pass
