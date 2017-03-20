@@ -1,0 +1,5 @@
+[encoding: UTF-8]
+[type: gettext/rfc822deb] jobs/examples-trivial.txt
+[type: gettext/rfc822deb] jobs/examples-normal.txt
+[type: gettext/rfc822deb] jobs/examples-intermediate.txt
+manage.py
