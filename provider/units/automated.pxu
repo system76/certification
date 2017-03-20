@@ -1,20 +1,22 @@
 unit: category
-id: automated
-_name: Automated
+id: system76/automated
+_name: System76 Automated Category
 
 unit: test plan
 id: automated
-_name: System76 Automated Tests
+_name: System76 Automated Test Plan
 _description: Jobs using only the basic functionality
 estimated_duration: 0.02
 nested_part:
     2013.com.canonical.certification::autotesting
 include:
-    automated/.*
+    system76/automated/.*
+exclude:
+    memory/check
 
 unit: job
-id: automated/always-pass
-category_id: automated
+id: system76/automated/always-pass
+category_id: system76/automated
 _summary: A test that always passes
 _description:
    A test that always passes
@@ -27,8 +29,8 @@ command: true
 flags: preserve-locale
 
 unit: job
-id: automated/always-fail
-category_id: automated
+id: system76/automated/always-fail
+category_id: system76/automated
 _summary: A test that always fails
 _description:
    A test that always fails
