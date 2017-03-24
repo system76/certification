@@ -5,16 +5,28 @@ cd provider
 ./manage.py develop -f
 cd ..
 
-PLAN=manual
+if [ -e "provider/units/$1.pxu" ]
+then
+  PLAN="$1"
+else
+  echo "$0 [plan]"
+  for plan_file in provider/units/*.pxu
+  do
+    plan="$(basename "$plan_file" .pxu)"
+    echo "    $plan"
+  done
+  exit 1
+fi
+
 REPORT="report/$PLAN/"
 mkdir -p "$REPORT"
 cd "$REPORT"
 
-if [ "$PLAN" == "manual" ]
+if [ "$PLAN" == "automated" ]
 then
-  UI=converged
-else
   UI=silent
+else
+  UI=converged
 fi
 
 cat > launcher.conf <<EOF

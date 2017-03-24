@@ -6,66 +6,6 @@ unit: test plan
 id: manual
 _name: System76 Manual Test Plan
 _description: Manual jobs
-estimated_duration: 0.02
+estimated_duration: 1.00
 include:
     system76/manual/.*
-
-unit: job
-id: system76/manual/hotkey_mute
-category_id: system76/manual
-_summary: Test the mute hotkey
-_description:
-   Test the function of the mute hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
-plugin: manual
-
-unit: job
-id: system76/manual/hotkey_volume_up
-category_id: system76/manual
-_summary: Test the volume up hotkey
-_description:
-   Test the function of the volume up hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
-plugin: manual
-
-unit: job
-id: system76/manual/hotkey_volume_down
-category_id: system76/manual
-_summary: Test the volume down hotkey
-_description:
-   Test the function of the volume down hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
-plugin: manual
-
-unit: job
-id: system76/manual/hotkey_screen_off
-category_id: system76/manual
-_summary: Test the screen off hotkey
-_description:
-   Test the function of the screen off hotkey
-   .
-   The screen should turn off. Pressing the key again should turn it back on.
-plugin: manual
-
-unit: job
-id: system76/manual/hotkey_brightness_up
-category_id: system76/manual
-_summary: Test the brightness up hotkey
-_description:
-   Test the function of the brightness up hotkey
-   .
-   The screen brightness should change, and a notification should pop up.
-plugin: manual
-
-unit: job
-id: system76/manual/hotkey_brightness_down
-category_id: system76/manual
-_summary: Test the brightness down hotkey
-_description:
-   Test the function of the brightness down hotkey
-   .
-   The screen brightness should change, and a notification should pop up.
-plugin: manual
