@@ -5,10 +5,17 @@ cd provider
 ./manage.py develop -f
 cd ..
 
-PLAN=automated
+PLAN=manual
 REPORT="report/$PLAN/"
 mkdir -p "$REPORT"
 cd "$REPORT"
+
+if [ "$PLAN" == "manual" ]
+then
+  UI=converged
+else
+  UI=silent
+fi
 
 cat > launcher.conf <<EOF
 [launcher]
@@ -24,7 +31,7 @@ forced = yes
 forced = yes
 
 [ui]
-type = silent
+type = $UI
 
 [exporter:html]
 unit = 2013.com.canonical.plainbox::html

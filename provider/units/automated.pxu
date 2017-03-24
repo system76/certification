@@ -5,7 +5,7 @@ _name: System76 Automated Category
 unit: test plan
 id: automated
 _name: System76 Automated Test Plan
-_description: Jobs using only the basic functionality
+_description: Automated jobs
 estimated_duration: 0.02
 nested_part:
     2013.com.canonical.certification::autotesting
