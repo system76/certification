@@ -1,67 +1,89 @@
 unit: test plan
 id: hotkeys
-_name: System76 Manual Hotkey Test Plan
-_description: Manual hotkey jobs
+name: System76 Manual Hotkey Test Plan
+description: Manual hotkey jobs
 estimated_duration: 1.00
 include:
     system76/manual/hotkey/.*
 
 unit: job
+id: system76/manual/hotkey/touchpad_toggle
+category_id: system76/manual
+summary: Test the touchpad toggle
+description:
+    The touchpad should turn off. Pressing the key again should turn it back on.
+flags: explicit-fail
+plugin: manual
+
+unit: job
+id: system76/manual/hotkey/lcd_toggle
+category_id: system76/manual
+summary: LCD toggle hotkey
+description:
+    The LCD screen should turn off. Pressing the key again should turn it back on.
+flags: explicit-fail
+plugin: manual
+
+unit: job
 id: system76/manual/hotkey/mute
 category_id: system76/manual
-_summary: Test the mute hotkey
-_description:
-   Test the function of the mute hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
+summary: Mute hotkey
+description:
+    The volume indicator should change, and a notification should pop up.
+flags: explicit-fail
 plugin: manual
 
 unit: job
-id: system76/manual/hotkey/volume_up
+id: system76/manual/hotkey/volume
 category_id: system76/manual
-_summary: Test the volume up hotkey
-_description:
-   Test the function of the volume up hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
+summary: Volume up and down hotkeys
+description:
+    The volume indicator should change, and a notification should pop up.
+flags: explicit-fail
 plugin: manual
 
 unit: job
-id: system76/manual/hotkey/volume_down
+id: system76/manual/hotkey/display_switch
 category_id: system76/manual
-_summary: Test the volume down hotkey
-_description:
-   Test the function of the volume down hotkey
-   .
-   The volume indicator should change, and a notification should pop up.
+summary: Display switch hotkey
+description:
+    TODO
+flags: explicit-fail
 plugin: manual
 
 unit: job
-id: system76/manual/hotkey/screen_off
+id: system76/manual/hotkey/brightness
 category_id: system76/manual
-_summary: Test the screen off hotkey
-_description:
-   Test the function of the screen off hotkey
-   .
-   The screen should turn off. Pressing the key again should turn it back on.
+summary: Brightness up and down hotkeys
+description:
+    The screen brightness should change, and a notification should pop up.
+flags: explicit-fail
 plugin: manual
 
 unit: job
-id: system76/manual/hotkey/brightness_up
+id: system76/manual/hotkey/camera_toggle
 category_id: system76/manual
-_summary: Test the brightness up hotkey
-_description:
-   Test the function of the brightness up hotkey
-   .
-   The screen brightness should change, and a notification should pop up.
+summary: Camera toggle hotkey
+description:
+    The camera should be disabled. Pressing the key again will enable it.
+flags: explicit-fail
 plugin: manual
 
 unit: job
-id: system76/manual/hotkey/brightness_down
+id: system76/manual/hotkey/airplane_mode
 category_id: system76/manual
-_summary: Test the brightness down hotkey
-_description:
-   Test the function of the brightness down hotkey
-   .
-   The screen brightness should change, and a notification should pop up.
+summary: Airplane mode hotkey
+description:
+    WiFi and bluetooth should be disabled. Pressing the key again will enable them.
+    The airplane mode light should also toggle on and off.
+flags: explicit-fail
+plugin: manual
+
+unit: job
+id: system76/manual/hotkey/suspend
+category_id: system76/manual
+summary: Suspend hotkey
+description:
+    The system should go to sleep. Pressing the key again will wake the system up.
+flags: explicit-fail
 plugin: manual
