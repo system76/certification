@@ -1,0 +1,30 @@
+Combine all tests into a single list.
+'Firmware version' needs expanded to: 'BIOS Version', 'KDC/EC Version', 'ME FW Version', 'VBIOS Version'
+Put the F1-F12, then the Keyboard backlight Up/Down/Toggle/Color grouped together in laptops.
+(The initial order they are made in is different then once it's saved and the edit button is pressed...)
+Make all of the blanks multi-line, and larger than 1 visible line (or expandable).
+Add a 4th radius button for 'not tested' and make that the default. So it will be:
+Pass, Fail, Not Present, Not Tested
+Group the external monitor tests together.
+Add 'External Monitor - VGA' to the test.
+Add a powerstat (power drain) test.
+Add a separate test for USB-C under the USB ports.
+Add a RAID test.
+Add CPU frequency driver and CPU frequency governor.
+Add a blank for the output of synclient. (this shows what it detects for the touchpad, and I've seen issues on some hardware)
+Add a blank for 'Touchpad - All area registering correctly'.
+Sort the Products hardware list alphabetically.
+Add a 'Fn+1 fan test'.
+Add 'DVD drive read test'.
+Add an nVidia card info (nvidia-smi -q) blank.
+Add an nVidia AC/Battery power source switches correctly
+Add a 'BIOS settings are correct' blank.
+Add 'Battery information' section.
+Add a 'ifconfig' and 'iwconfig' blanks
+Add a Check for keyboard ghosting.
+Add a 'tested by' blank.
+Add CPU use correct (powertop)
+Is color coding Pass/Fail on the results screen difficult?
+Please let me know how to curl json into the page.
+Wake on Lan
+GSYNC test

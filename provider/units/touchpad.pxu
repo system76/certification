@@ -1,0 +1,4 @@
+unit: job
+id: system76/manual/touchpad/tap_to_click
+description: Test tap to click
+command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
