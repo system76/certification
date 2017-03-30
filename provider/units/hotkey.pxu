@@ -12,11 +12,8 @@ _summary: Test the touchpad toggle
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the touchpad toggle key and test that the touchpad is disabled.
-    Press the touchpad toggle key again, and test that the touchpad is enabled.
-_verification:
-    The test has failed if the touchpad toggle key does not disable and enable the touchpad
+_description:
+    The touchpad should turn off. Pressing the key again should turn it back on.
 
 unit: job
 id: hotkey/lcd_toggle
@@ -24,11 +21,8 @@ _summary: LCD toggle hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the LCD toggle key and test that the screen is disabled.
-    Press the LCD toggle key again, and test that the screen is enabled.
-_verification:
-    The test has failed if the LCD toggle key does not disable and enable the screen.
+_description:
+    The LCD screen should turn off. Pressing the key again should turn it back on.
 
 unit: job
 id: hotkey/mute
@@ -36,11 +30,8 @@ _summary: Mute hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the mute key and test that sound is muted.
-    Press the mute key again, and test that sound is unmuted.
-_verification:
-    The test has failed if the mute key does not toggle sound output, or a notification does not pop up.
+_description:
+    The volume indicator should change, and a notification should pop up.
 
 unit: job
 id: hotkey/volume
@@ -48,10 +39,8 @@ _summary: Volume up and down hotkeys
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the volume down and up keys, testing that sound volume changes.
-_verification:
-    The test has failed if the volume keys do not change sound volume, or a notification does not pop up.
+_description:
+    The volume indicator should change, and a notification should pop up.
 
 unit: job
 id: hotkey/display_switch
@@ -59,9 +48,7 @@ _summary: Display switch hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    TODO
-_verification:
+_description:
     TODO
 
 unit: job
@@ -70,9 +57,7 @@ _summary: Brightness up and down hotkeys
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the brightness down and up keys, testing that screen brightness changes.
-_verification:
+_description:
     The screen brightness should change, and a notification should pop up.
 
 unit: job
@@ -81,11 +66,8 @@ _summary: Camera toggle hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the camera toggle key and test that the camera is disabled.
-    Press the camera toggle key again, and test that the camera is enabled.
-_verification:
-    The test has failed if the camera toggle key does not disable and enable the camera.
+_description:
+    The camera should be disabled. Pressing the key again will enable it.
 
 unit: job
 id: hotkey/airplane_mode
@@ -93,11 +75,9 @@ _summary: Airplane mode hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the airplane mode key, test that WiFi and bluetooth is disabled, and that the airplane mode LED light is turned on.
-    Press the airplane mode key again, test that WiFi and bluetooth is enabled, and that the airplane mode LED light is turned off.
-_verification:
-    The test has failed if the airplane mode key does not toggle WiFi and bluetooth output, or the LED does not change.
+_description:
+    WiFi and bluetooth should be disabled. Pressing the key again will enable them.
+    The airplane mode light should also toggle on and off.
 
 unit: job
 id: hotkey/suspend
@@ -105,8 +85,5 @@ _summary: Suspend hotkey
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
-_steps:
-    Press the suspend key and test that the system suspends.
-    Press the suspend key again, and test that the system resumes.
-_verification:
-    The test has failed if the suspend key does suspend and resume the system.
+_description:
+    The system should go to sleep. Pressing the key again will wake the system up.

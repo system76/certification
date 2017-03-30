@@ -10,4 +10,14 @@ exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery
     2013.com.canonical.certification::memory/check
+    2013.com.canonical.certification::networking/http
+    2013.com.canonical.certification::suspend/bluetooth_obex_browse_after_suspend_auto
+    2013.com.canonical.certification::suspend/bluetooth_obex_browse_before_suspend
+    2013.com.canonical.certification::suspend/bluetooth_obex_get_after_suspend_auto
+    2013.com.canonical.certification::suspend/bluetooth_obex_get_before_suspend
+    2013.com.canonical.certification::suspend/bluetooth_obex_send_after_suspend_auto
+    2013.com.canonical.certification::suspend/bluetooth_obex_send_before_suspend
     2013.com.canonical.certification::suspend/record_playback_after_suspend_auto
+    2013.com.canonical.certification::suspend/usb_storage_preinserted_after_suspend
+    2013.com.canonical.certification::usb/storage-preinserted
+

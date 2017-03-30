@@ -13,10 +13,8 @@ plugin: user-interact-verify
 flags: explicit-fail preserve-locale
 estimated_duration: 30s
 command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-_steps:
-    Attempt to tap on the touchpad to click on the ubuntu icon.
-_verification:
-    The test fails if tap to click does not function.
+_description:
+    Test that tap to click has been enabled
 
 unit: job
 id: touchpad/disable_tap_to_click
@@ -25,7 +23,5 @@ plugin: user-interact-verify
 flags: explicit-fail preserve-locale
 estimated_duration: 30s
 command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
-_steps:
-    Attempt to tap on the touchpad to click on the ubuntu icon.
-_verification:
-    The test fails if tap to click is still functioning.
+_description:
+    Test that tap to click has been disabled
