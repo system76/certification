@@ -1,34 +1,40 @@
 # Run tests using checkbox
 set -e
 
-cd provider
-python3 manage.py develop -f
-cd ..
+# Check if checkbox-converged QML file is available
+QML="$PWD/checkbox-converged/checkbox-converged.qml"
+if [ ! -f "$QML" ]
+then
+    echo "$0: checkbox-converged not found" >&2
+    echo "    Please try running deps.sh" >&2
+    exit 1
+fi
 
-if [ -e "provider/units/$1.pxu" ]
+# Check if provider is available
+if [ -f "provider/units/$1.pxu" ]
 then
   PLAN="$1"
 else
-  echo "$0 [plan]"
+  echo "$0 [plan]" >&2
   for plan_file in provider/units/*.pxu
   do
     plan="$(basename "$plan_file" .pxu)"
-    echo "    $plan"
+    echo "    $plan" >&2
   done
   exit 1
 fi
 
+# Update provider information
+cd provider
+python3 manage.py develop -f
+cd ..
+
+# Create report directory
 REPORT="report/$PLAN/"
 mkdir -p "$REPORT"
 cd "$REPORT"
 
-if [ "$PLAN" == "automated" ]
-then
-  UI=silent
-else
-  UI=converged
-fi
-
+# Create launcher
 cat > launcher.conf <<EOF
 [launcher]
 launcher_version = 1
@@ -43,7 +49,7 @@ forced = yes
 forced = yes
 
 [ui]
-type = $UI
+type = converged
 
 [exporter:html]
 unit = 2013.com.canonical.plainbox::html
@@ -70,4 +76,6 @@ transport = tar
 forced = yes
 EOF
 
-QT_AUTO_SCREEN_SCALE_FACTOR=1 checkbox-cli launcher.conf
+# Run checkbox-converged with the launcher
+#QT_AUTO_SCREEN_SCALE_FACTOR=1 checkbox-cli launcher.conf
+QT_AUTO_SCREEN_SCALE_FACTOR=1 qmlscene "$QML" --launcher=launcher.conf
