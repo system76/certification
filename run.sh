@@ -2,7 +2,7 @@
 set -e
 
 cd provider
-./manage.py develop -f
+python3 manage.py develop -f
 cd ..
 
 if [ -e "provider/units/$1.pxu" ]
