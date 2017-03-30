@@ -1,8 +1,9 @@
 unit: test plan
 id: everything
-name: System76 Everything Test Plan
-description: Manual and automated jobs
+_name: System76 Everything Test Plan
+_description: Manual and automated jobs
+estimated_duration: 20m
 nested_part:
     manual
     automated
-
+include:

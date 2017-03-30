@@ -1,9 +1,11 @@
 unit: test plan
 id: automated
-name: System76 Automated Test Plan
-description: Automated jobs
+_name: System76 Automated Test Plan
+_description: Automated jobs
+estimated_duration: 10m
 nested_part:
     2013.com.canonical.certification::autotesting
+include:
 exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery

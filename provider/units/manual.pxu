@@ -1,7 +1,9 @@
 unit: test plan
 id: manual
-name: System76 Manual Test Plan
-description: Manual jobs
+_name: System76 Manual Test Plan
+_description: Manual jobs
+estimated_duration: 10m
 nested_part:
     hotkey
     touchpad
+include:

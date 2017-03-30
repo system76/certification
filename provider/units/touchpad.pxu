@@ -1,24 +1,31 @@
 unit: test plan
 id: touchpad
-name: System76 Manual Touchpad Test Plan
-description: Manual touchpad jobs
+_name: System76 Manual Touchpad Test Plan
+_description: Manual touchpad jobs
+estimated_duration: 5m
 include:
     touchpad/.*
 
 unit: job
 id: touchpad/tap_to_click
-summary: Enabled tap to click
+_summary: Enabled tap to click
 plugin: user-interact-verify
-flags: explicit-fail
+flags: explicit-fail preserve-locale
+estimated_duration: 30s
 command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-description:
-    Test that tap to click has been enabled
+_steps:
+    Attempt to tap on the touchpad to click on the ubuntu icon.
+_verification:
+    The test fails if tap to click does not function.
 
 unit: job
 id: touchpad/disable_tap_to_click
-summary: Disabled tap to click
+_summary: Disabled tap to click
 plugin: user-interact-verify
-flags: explicit-fail
+flags: explicit-fail preserve-locale
+estimated_duration: 30s
 command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
-description:
-    Test that tap to click has been disabled
+_steps:
+    Attempt to tap on the touchpad to click on the ubuntu icon.
+_verification:
+    The test fails if tap to click is still functioning.

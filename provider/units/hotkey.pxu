@@ -1,79 +1,112 @@
 unit: test plan
 id: hotkey
-name: System76 Manual Hotkey Test Plan
-description: Manual hotkey jobs
+_name: System76 Manual Hotkey Test Plan
+_description: Manual hotkey jobs
+estimated_duration: 5m
 include:
     hotkey/.*
 
 unit: job
 id: hotkey/touchpad_toggle
-summary: Test the touchpad toggle
+_summary: Test the touchpad toggle
 plugin: manual
 flags: explicit-fail
-description:
-    The touchpad should turn off. Pressing the key again should turn it back on.
+estimated_duration: 30s
+_steps:
+    Press the touchpad toggle key and test that the touchpad is disabled.
+    Press the touchpad toggle key again, and test that the touchpad is enabled.
+_verification:
+    The test has failed if the touchpad toggle key does not disable and enable the touchpad
 
 unit: job
 id: hotkey/lcd_toggle
-summary: LCD toggle hotkey
+_summary: LCD toggle hotkey
 plugin: manual
 flags: explicit-fail
-description:
-    The LCD screen should turn off. Pressing the key again should turn it back on.
+estimated_duration: 30s
+_steps:
+    Press the LCD toggle key and test that the screen is disabled.
+    Press the LCD toggle key again, and test that the screen is enabled.
+_verification:
+    The test has failed if the LCD toggle key does not disable and enable the screen.
 
 unit: job
 id: hotkey/mute
-summary: Mute hotkey
+_summary: Mute hotkey
 plugin: manual
 flags: explicit-fail
-description:
-    The volume indicator should change, and a notification should pop up.
+estimated_duration: 30s
+_steps:
+    Press the mute key and test that sound is muted.
+    Press the mute key again, and test that sound is unmuted.
+_verification:
+    The test has failed if the mute key does not toggle sound output, or a notification does not pop up.
 
 unit: job
 id: hotkey/volume
-summary: Volume up and down hotkeys
+_summary: Volume up and down hotkeys
 plugin: manual
 flags: explicit-fail
-description:
-    The volume indicator should change, and a notification should pop up.
+estimated_duration: 30s
+_steps:
+    Press the volume down and up keys, testing that sound volume changes.
+_verification:
+    The test has failed if the volume keys do not change sound volume, or a notification does not pop up.
 
 unit: job
 id: hotkey/display_switch
-summary: Display switch hotkey
+_summary: Display switch hotkey
 plugin: manual
 flags: explicit-fail
-description:
+estimated_duration: 30s
+_steps:
+    TODO
+_verification:
     TODO
 
 unit: job
 id: hotkey/brightness
-summary: Brightness up and down hotkeys
+_summary: Brightness up and down hotkeys
 plugin: manual
 flags: explicit-fail
-description:
+estimated_duration: 30s
+_steps:
+    Press the brightness down and up keys, testing that screen brightness changes.
+_verification:
     The screen brightness should change, and a notification should pop up.
 
 unit: job
 id: hotkey/camera_toggle
-summary: Camera toggle hotkey
+_summary: Camera toggle hotkey
 plugin: manual
 flags: explicit-fail
-description:
-    The camera should be disabled. Pressing the key again will enable it.
+estimated_duration: 30s
+_steps:
+    Press the camera toggle key and test that the camera is disabled.
+    Press the camera toggle key again, and test that the camera is enabled.
+_verification:
+    The test has failed if the camera toggle key does not disable and enable the camera.
 
 unit: job
 id: hotkey/airplane_mode
-summary: Airplane mode hotkey
+_summary: Airplane mode hotkey
 plugin: manual
 flags: explicit-fail
-description:
-    WiFi and bluetooth should be disabled. Pressing the key again will enable them.
-    The airplane mode light should also toggle on and off.
+estimated_duration: 30s
+_steps:
+    Press the airplane mode key, test that WiFi and bluetooth is disabled, and that the airplane mode LED light is turned on.
+    Press the airplane mode key again, test that WiFi and bluetooth is enabled, and that the airplane mode LED light is turned off.
+_verification:
+    The test has failed if the airplane mode key does not toggle WiFi and bluetooth output, or the LED does not change.
 
 unit: job
 id: hotkey/suspend
-summary: Suspend hotkey
+_summary: Suspend hotkey
 plugin: manual
 flags: explicit-fail
-description:
-    The system should go to sleep. Pressing the key again will wake the system up.
+estimated_duration: 30s
+_steps:
+    Press the suspend key and test that the system suspends.
+    Press the suspend key again, and test that the system resumes.
+_verification:
+    The test has failed if the suspend key does suspend and resume the system.
