@@ -1,4 +1,4 @@
 [submodule "checkbox-converged"]
 	path = checkbox-converged
-	url = git+ssh://jackpot51@git.launchpad.net/~jackpot51/checkbox-converged
+	url = https://git.launchpad.net/~jackpot51/checkbox-converged
 	branch = master
