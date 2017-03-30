@@ -1,4 +1,24 @@
+unit: test plan
+id: touchpad
+name: System76 Manual Touchpad Test Plan
+description: Manual touchpad jobs
+include:
+    touchpad/.*
+
 unit: job
-id: system76/manual/touchpad/tap_to_click
-description: Test tap to click
+id: touchpad/tap_to_click
+summary: Enabled tap to click
+plugin: user-interact-verify
+flags: explicit-fail
 command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+description:
+    Test that tap to click has been enabled
+
+unit: job
+id: touchpad/disable_tap_to_click
+summary: Disabled tap to click
+plugin: user-interact-verify
+flags: explicit-fail
+command: gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click false
+description:
+    Test that tap to click has been disabled

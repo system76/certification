@@ -1,46 +1,11 @@
-unit: category
-id: system76/automated
-_name: System76 Automated Category
-
 unit: test plan
 id: automated
-_name: System76 Automated Test Plan
-_description: Automated jobs
-estimated_duration: 0.02
+name: System76 Automated Test Plan
+description: Automated jobs
 nested_part:
     2013.com.canonical.certification::autotesting
-include:
-    system76/automated/.*
 exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery
     2013.com.canonical.certification::memory/check
     2013.com.canonical.certification::suspend/record_playback_after_suspend_auto
-
-unit: job
-id: system76/automated/always-pass
-category_id: system76/automated
-_summary: A test that always passes
-_description:
-   A test that always passes
-   .
-   This simple test will always succeed, assuming your
-   platform has a 'true' command that returns 0.
-plugin: shell
-estimated_duration: 0.01
-command: true
-flags: preserve-locale
-
-unit: job
-id: system76/automated/always-fail
-category_id: system76/automated
-_summary: A test that always fails
-_description:
-   A test that always fails
-   .
-   This simple test will always fail, assuming your
-   platform has a 'false' command that returns 1.
-plugin: shell
-estimated_duration: 0.01
-command: false
-flags: preserve-locale

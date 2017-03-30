@@ -1,89 +1,79 @@
 unit: test plan
-id: hotkeys
+id: hotkey
 name: System76 Manual Hotkey Test Plan
 description: Manual hotkey jobs
-estimated_duration: 1.00
 include:
-    system76/manual/hotkey/.*
+    hotkey/.*
 
 unit: job
-id: system76/manual/hotkey/touchpad_toggle
-category_id: system76/manual
+id: hotkey/touchpad_toggle
 summary: Test the touchpad toggle
+plugin: manual
+flags: explicit-fail
 description:
     The touchpad should turn off. Pressing the key again should turn it back on.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/lcd_toggle
-category_id: system76/manual
+id: hotkey/lcd_toggle
 summary: LCD toggle hotkey
+plugin: manual
+flags: explicit-fail
 description:
     The LCD screen should turn off. Pressing the key again should turn it back on.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/mute
-category_id: system76/manual
+id: hotkey/mute
 summary: Mute hotkey
+plugin: manual
+flags: explicit-fail
 description:
     The volume indicator should change, and a notification should pop up.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/volume
-category_id: system76/manual
+id: hotkey/volume
 summary: Volume up and down hotkeys
+plugin: manual
+flags: explicit-fail
 description:
     The volume indicator should change, and a notification should pop up.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/display_switch
-category_id: system76/manual
+id: hotkey/display_switch
 summary: Display switch hotkey
+plugin: manual
+flags: explicit-fail
 description:
     TODO
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/brightness
-category_id: system76/manual
+id: hotkey/brightness
 summary: Brightness up and down hotkeys
+plugin: manual
+flags: explicit-fail
 description:
     The screen brightness should change, and a notification should pop up.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/camera_toggle
-category_id: system76/manual
+id: hotkey/camera_toggle
 summary: Camera toggle hotkey
+plugin: manual
+flags: explicit-fail
 description:
     The camera should be disabled. Pressing the key again will enable it.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/airplane_mode
-category_id: system76/manual
+id: hotkey/airplane_mode
 summary: Airplane mode hotkey
+plugin: manual
+flags: explicit-fail
 description:
     WiFi and bluetooth should be disabled. Pressing the key again will enable them.
     The airplane mode light should also toggle on and off.
-flags: explicit-fail
-plugin: manual
 
 unit: job
-id: system76/manual/hotkey/suspend
-category_id: system76/manual
+id: hotkey/suspend
 summary: Suspend hotkey
+plugin: manual
+flags: explicit-fail
 description:
     The system should go to sleep. Pressing the key again will wake the system up.
-flags: explicit-fail
-plugin: manual
