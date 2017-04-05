@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body class="container">
@@ -21,6 +22,14 @@
                         <a href="/view/{{this}}">{{this}}</a>
                     </td></tr>
                 {{/each}}
+                <tr><td>
+                    <form action="/create" method="post" accept-charset="utf-8" class="form-inline">
+                        <label for="model">Model:</label>
+                        <input class="form-control" type="text" id="model" name="model">
+
+                        <button class="btn btn-primary" type="submit">Create</button>
+                    </form>
+                </td></tr>
             </table>
         </div>
 
@@ -29,19 +38,19 @@
                 <h3 class="panel-title">Upload Test Results</h3>
             </div>
             <div class="panel-body">
-                <form action="/upload" method="post" enctype="multipart/form-data" style="max-width: 300px">
+                <form action="/upload" method="post" enctype="multipart/form-data" accept-charset="utf-8" style="max-width: 300px">
                     <div class="form-group">
                         <label for="model">Model:</label>
-                        <select class="form-control" id="model">
+                        <select class="form-control" id="model" name="model">
                             {{#each models}}
-                                <option>{{this}}</option>
+                                <option value="{{this}}">{{this}}</option>
                             {{/each}}
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="file">Archive:</label>
-                        <input type="file" id="file">
+                        <input type="file" id="file" name="file">
                     </div>
 
                     <button class="btn btn-primary" type="submit">Upload</button>

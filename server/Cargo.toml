@@ -8,6 +8,7 @@ rocket = "0.2.4"
 rocket_codegen = "0.2.4"
 serde = "0.9"
 serde_derive = "0.9"
+serde_json = "0.9"
 multipart = "0.11"
 
 [dependencies.rocket_contrib]

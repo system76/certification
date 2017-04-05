@@ -6,38 +6,38 @@ extern crate rocket;
 extern crate rocket_contrib;
 #[macro_use]
 extern crate serde_derive;
+extern crate serde_json;
 
 use rocket_contrib::Template;
+use std::{fs, io};
 
-mod file;
+mod create;
+mod test;
 mod upload;
+mod util;
 mod view;
 
-pub fn models() -> Vec<&'static str> {
-    vec![
-        "galp2",
-        "gaze12",
-        "kudu4",
-    ]
-}
-
 #[get("/")]
-fn index() -> Template {
+fn index() -> io::Result<Template> {
     #[derive(Serialize)]
     struct Context {
         version: &'static str,
-        models: Vec<&'static str>,
+        models: Vec<String>,
     }
 
-    Template::render("index", &Context {
-        version: env!("CARGO_PKG_VERSION"),
-        models: models()
-    })
+    Ok(Template::render("index", &Context {
+        version: util::version(),
+        models: util::list_models()?
+    }))
 }
 
 fn main() {
+    // Create test dir if it does not exist
+    fs::create_dir_all("tests").unwrap();
+
     rocket::ignite().mount("/", routes![
         index,
+        create::index,
         upload::index,
         view::model,
         view::test

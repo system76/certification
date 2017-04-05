@@ -1,7 +1,10 @@
 use rocket_contrib::Template;
+use std::io;
+use test::Test;
+use util;
 
 #[get("/view/<model>")]
-fn model(model: &str) -> Template {
+fn model(model: &str) -> io::Result<Template> {
     #[derive(Serialize)]
     struct Context {
         version: &'static str,
@@ -9,25 +12,27 @@ fn model(model: &str) -> Template {
         tests: Vec<String>,
     }
 
-    Template::render("view/model", &Context {
-        version: env!("CARGO_PKG_VERSION"),
+    Ok(Template::render("view/model", &Context {
+        version: util::version(),
         model: model.to_string(),
-        tests: vec!["test_1".to_string()]
-    })
+        tests: util::list_tests(model)?
+    }))
 }
 
 #[get("/view/<model>/<test>")]
-fn test(model: &str, test: &str) -> Template {
+fn test(model: &str, test: &str) -> io::Result<Template> {
     #[derive(Serialize)]
     struct Context {
         version: &'static str,
         model: String,
         test: String,
+        data: String,
     }
 
-    Template::render("view/test", &Context {
-        version: env!("CARGO_PKG_VERSION"),
+    Ok(Template::render("view/test", &Context {
+        version: util::version(),
         model: model.to_string(),
         test: test.to_string(),
-    })
+        data: format!("{:#?}", Test::from_str(&util::read_test(model, test)?)?)
+    }))
 }
