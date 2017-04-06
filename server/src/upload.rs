@@ -12,6 +12,7 @@ use util::{self, TempFile};
 #[derive(Debug)]
 pub struct Upload {
     model: String,
+    test: String,
     file: TempFile
 }
 
@@ -40,6 +41,7 @@ impl FromData for Upload {
         };
 
         let mut model_opt: Option<String> = None;
+        let mut test_opt: Option<String> = None;
         let mut file_opt: Option<TempFile> = None;
 
         println!("Found multipart with boundary value: {}", boundary);
@@ -50,37 +52,38 @@ impl FromData for Upload {
                     "model" => if let Some(text) = field.data.as_text() {
                         model_opt = Some(text.to_string());
                     } else {
-                        println!("Invalid data for model");
+                        println!("ERROR: Invalid data for model");
+                        return Failure((Status::UnprocessableEntity, ()));
+                    },
+                    "test" => if let Some(text) = field.data.as_text() {
+                        test_opt = Some(text.to_string());
+                    } else {
+                        println!("ERROR: Invalid data for test");
                         return Failure((Status::UnprocessableEntity, ()));
                     },
                     "file" => if let Some(file) = field.data.as_file() {
-                        if file.filename.is_some() {
-                            println!("Found a file ({:?}) with name: {:?}", file.content_type, file.filename);
-                            match file.save().size_limit(4 * 1024 * 1024).temp() {
-                                SaveResult::Full(saved_file) => {
-                                    println!("Saved the file somewhere: {:?}", saved_file);
-                                    file_opt = Some(TempFile(saved_file));
-                                },
-                                SaveResult::Partial(temp_file, reason) => {
-                                    println!("ERROR: Partially saved to temp file {:?}: {:?}", temp_file, reason);
-                                    drop(TempFile(temp_file));
-                                    return Failure((Status::InternalServerError, ()));
-                                },
-                                SaveResult::Error(e) => {
-                                    println!("ERROR: Could not save to temp file: {:?}", e);
-                                    return Failure((Status::InternalServerError, ()));
-                                }
+                        println!("Found a file ({:?}) with name: {:?}", file.content_type, file.filename);
+                        match file.save().size_limit(4 * 1024 * 1024).temp() {
+                            SaveResult::Full(saved_file) => {
+                                println!("Saved the file somewhere: {:?}", saved_file);
+                                file_opt = Some(TempFile(saved_file));
+                            },
+                            SaveResult::Partial(temp_file, reason) => {
+                                println!("ERROR: Partially saved to temp file {:?}: {:?}", temp_file, reason);
+                                drop(TempFile(temp_file));
+                                return Failure((Status::InternalServerError, ()));
+                            },
+                            SaveResult::Error(e) => {
+                                println!("ERROR: Could not save to temp file: {:?}", e);
+                                return Failure((Status::InternalServerError, ()));
                             }
-                        } else {
-                            println!("Empty filename for file");
-                            return Failure((Status::UnprocessableEntity, ()));
                         }
                     } else {
-                        println!("Invalid data for file");
+                        println!("ERROR: Invalid data for file");
                         return Failure((Status::UnprocessableEntity, ()));
                     },
                     _ => {
-                        println!("Unknown field: {}", field.name);
+                        println!("ERROR: Unknown field: {}", field.name);
                         return Failure((Status::UnprocessableEntity, ()));
                     }
                 },
@@ -97,7 +100,15 @@ impl FromData for Upload {
         let model = match model_opt {
             Some(model) => model,
             None => {
-                println!("Did not find model");
+                println!("ERROR: Did not find model");
+                return Failure((Status::UnprocessableEntity, ()));
+            }
+        };
+
+        let test = match test_opt {
+            Some(test) => test,
+            None => {
+                println!("ERROR: Did not find test");
                 return Failure((Status::UnprocessableEntity, ()));
             }
         };
@@ -105,13 +116,14 @@ impl FromData for Upload {
         let file = match file_opt {
             Some(file) => file,
             None => {
-                println!("Did not find file");
+                println!("ERROR: Did not find file");
                 return Failure((Status::UnprocessableEntity, ()));
             }
         };
 
         Success(Upload {
             model: model,
+            test: test,
             file: file
         })
     }
@@ -119,6 +131,6 @@ impl FromData for Upload {
 
 #[post("/upload", data="<upload>")]
 fn index(upload: Upload) -> io::Result<Redirect> {
-    let (model, test) = util::create_test(&upload.model, &upload.file)?;
+    let (model, test) = util::create_test(&upload.model, &upload.test, &upload.file)?;
     Ok(Redirect::to(&format!("/view/{}/{}", model, test)))
 }

@@ -26,13 +26,13 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
         version: &'static str,
         model: String,
         test: String,
-        data: String,
+        data: Test,
     }
 
     Ok(Template::render("view/test", &Context {
         version: util::version(),
         model: model.to_string(),
         test: test.to_string(),
-        data: format!("{:#?}", Test::from_str(&util::read_test(model, test)?)?)
+        data: Test::from_str(&util::read_test(model, test)?)?
     }))
 }

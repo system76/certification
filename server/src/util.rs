@@ -9,24 +9,33 @@ pub fn version() -> &'static str {
 pub fn create_model(model: &str) -> io::Result<String> {
     let model = sanitize(model)?;
 
-    fs::create_dir(format!("tests/{}", model))?;
+    println!("create_model '{}'", model);
+
+    let mut path = test_path();
+    path.push(&model);
+    fs::create_dir_all(path)?;
     Ok(model)
 }
 
-pub fn create_test(model: &str, file: &TempFile) -> io::Result<(String, String)> {
-    let model = sanitize(model)?;
+pub fn create_test(model: &str, test: &str, file: &TempFile) -> io::Result<(String, String)> {
+    let model = create_model(model)?;
+    let test = sanitize(test)?;
 
-    let test = if let Some(ref filename) = file.0.filename {
-        sanitize(&filename)?
+    println!("create_test '{}' '{}'", model, test);
+
+    let mut path = test_path();
+    path.push(&model);
+    path.push(&test);
+    if ! path.exists() {
+        file.copy(path)?;
+        Ok((model, test))
     } else {
-        return Err(io::Error::new(io::ErrorKind::Other, "Filename was empty"));
-    };
-    file.copy(&format!("tests/{}/{}", model, test))?;
-    Ok((model, test))
+        Err(io::Error::new(io::ErrorKind::Other, "Filename already exists"))
+    }
 }
 
 pub fn list_models() -> io::Result<Vec<String>> {
-    list("tests", |entry| {
+    list(test_path(), |entry| {
         if let Ok(file_type) = entry.file_type() {
             file_type.is_dir()
         } else {
@@ -38,7 +47,9 @@ pub fn list_models() -> io::Result<Vec<String>> {
 pub fn list_tests(model: &str) -> io::Result<Vec<String>> {
     let model = sanitize(model)?;
 
-    list(&format!("tests/{}", model), |entry| {
+    let mut path = test_path();
+    path.push(&model);
+    list(path, |entry| {
         if let Ok(file_type) = entry.file_type() {
             file_type.is_file()
         } else {
@@ -51,13 +62,21 @@ pub fn read_test(model: &str, test: &str) -> io::Result<String> {
     let model = sanitize(model)?;
     let test = sanitize(test)?;
 
-    let mut file = fs::File::open(&format!("tests/{}/{}", model, test))?;
+    let mut path = test_path();
+    path.push(&model);
+    path.push(&test);
+    let mut file = fs::File::open(path)?;
     let mut data = String::new();
     file.read_to_string(&mut data)?;
     Ok(data)
 }
 
-fn list<F: Fn(&fs::DirEntry) -> bool>(path: &str, filter: F) -> io::Result<Vec<String>> {
+
+fn test_path() -> path::PathBuf {
+    path::PathBuf::from("tests")
+}
+
+fn list<P: AsRef<path::Path>, F: Fn(&fs::DirEntry) -> bool>(path: P, filter: F) -> io::Result<Vec<String>> {
     let mut entries = Vec::new();
 
     for entry_res in fs::read_dir(path)? {

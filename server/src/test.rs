@@ -1,13 +1,13 @@
 use serde_json;
 use std::io;
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Package {
     name: String,
     version: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Distribution {
     pub codename: String,
     pub description: String,
@@ -15,7 +15,7 @@ pub struct Distribution {
     pub release: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Result {
     pub id: String,
     pub name: String,
@@ -29,7 +29,7 @@ pub struct Result {
     pub project: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Device {
     pub bus: Option<String>,
     pub category: Option<String>,
@@ -48,13 +48,13 @@ pub struct Device {
     pub vendor_slug: Option<String>
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct ModprobeInfo {
     module: String,
     options: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Deserialize, Serialize)]
 pub struct Processor {
     pub bogomips: String,
     pub cache: String,
@@ -70,7 +70,7 @@ pub struct Processor {
     pub kind: String,
 }
 
-#[derive(Debug, Default, Deserialize)]
+#[derive(Debug, Default, Deserialize, Serialize)]
 pub struct Test {
     pub packages: Option<Vec<Package>>,
     pub distribution: Option<Distribution>,

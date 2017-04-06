@@ -8,6 +8,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            td.passed {
+                background-color: #00FF00
+            }
+            td.not.supported {
+                background-color: #FFFF00
+            }
+            td.failed {
+                background-color: #FF0000
+            }
+        </style>
     </head>
     <body class="container">
         <h2>Certification - Version {{version}}</h2>
@@ -23,6 +34,119 @@
             </table>
         </div>
 
-        <code style="display:block;white-space:pre-wrap;">{{data}}</code>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#details">Details</a>
+            <a class="btn btn-default" href="#results">Results</a>
+            <a class="btn btn-default" href="#modules">Modules</a>
+            <a class="btn btn-default" href="#packages">Packages</a>
+        </div>
+
+        <a id="details"></a>
+        <table class="table table-bordered">
+            <caption><h4>Details</h4></caption>
+            <tr>
+                <th>Model</th>
+                <td>{{model}}</td>
+            </tr>
+            <tr>
+                <th>Test</th>
+                <td>{{test}}</td>
+            </tr>
+            {{#if data.kernel}}
+                <tr>
+                    <th>Kernel</th>
+                    <td>{{data.kernel}}</td>
+                </tr>
+            {{/if}}
+            {{#if data.architecture}}
+                <tr>
+                    <th>Architecture</th>
+                    <td>{{data.architecture}}</td>
+                </tr>
+            {{/if}}
+            {{#if data.distribution}}
+                <tr>
+                    <th>Distributor</th>
+                    <td>{{data.distribution.distributor_id}}</td>
+                </tr>
+                <tr>
+                    <th>Release</th>
+                    <td>{{data.distribution.release}}</td>
+                </tr>
+                <tr>
+                    <th>Codename</th>
+                    <td>{{data.distribution.codename}}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{data.distribution.description}}</td>
+                </tr>
+            {{/if}}
+        <table>
+
+        <a id="results"></a>
+        <table class="table table-bordered">
+        {{#if data.results}}
+            <caption><h4>Results</h4></caption>
+            <tr>
+                <th>Result</th>
+                <th>Name</th>
+                <th>Comments</th>
+            </tr>
+            {{#each data.results}}
+                <tr>
+                    <td class="{{status}}">{{status}}</td>
+                    <td>
+                        {{#if name}}
+                            <span title="{{id}}">{{name}}</span>
+                        {{else}}
+                            {{id}}
+                        {{/if}}
+                    </td>
+                    <td>{{comments}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <caption><h4>No Result Information</h4></caption>
+        {{/if}}
+        <table>
+
+        <a id="modules"></a>
+        <table class="table table-bordered">
+        {{#if data.modprobe-info}}
+            <caption><h4>Modules</h4></caption>
+            <tr>
+                <th>Name</th>
+                <th>Options</th>
+            </tr>
+            {{#each data.modprobe-info}}
+                <tr>
+                    <td>{{module}}</td>
+                    <td>{{options}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <caption><h4>No Module Information</h4></caption>
+        {{/if}}
+        <table>
+
+        <a id="packages"></a>
+        <table class="table table-bordered">
+        {{#if data.packages}}
+            <caption><h4>Packages</h4></caption>
+            <tr>
+                <th>Name</th>
+                <th>Version</th>
+            </tr>
+            {{#each data.packages}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{version}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <caption><h4>No Package Information</h4></caption>
+        {{/if}}
+        <table>
     </body>
 </html>
