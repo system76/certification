@@ -15,7 +15,7 @@ if [ -f "provider/units/$1.pxu" ]
 then
   PLAN="$1"
 else
-  echo "$0 [plan]" >&2
+  echo "$0 <plan> [model]" >&2
   for plan_file in provider/units/*.pxu
   do
     plan="$(basename "$plan_file" .pxu)"
@@ -54,12 +54,19 @@ type = converged
 [exporter:html]
 unit = 2013.com.canonical.plainbox::html
 
+[exporter:json]
+unit = 2013.com.canonical.plainbox::json
+
 [exporter:tar]
 unit = 2013.com.canonical.plainbox::tar
 
 [transport:html]
 type = file
 path = report.html
+
+[transport:json]
+type = file
+path = report.json
 
 [transport:tar]
 type = file
@@ -68,6 +75,11 @@ path = report.tar
 [report:html]
 exporter = html
 transport = html
+forced = yes
+
+[report:json]
+exporter = json
+transport = json
 forced = yes
 
 [report:tar]
@@ -79,3 +91,12 @@ EOF
 # Run checkbox-converged with the launcher
 #QT_AUTO_SCREEN_SCALE_FACTOR=1 checkbox-cli launcher.conf
 QT_AUTO_SCREEN_SCALE_FACTOR=1 qmlscene "$QML" --launcher=launcher.conf
+
+if [ -n "$2" ]
+then
+  SERVER="http://localhost:8000"
+  MODEL="$2"
+  TEST="$(date "+%F_%T")_$PLAN"
+  echo "Uploading report.json to $SERVER/view/$MODEL/$TEST"
+  curl -F "model=$MODEL" -F "test=$TEST" -F "file=@report.json" "$SERVER/upload"
+fi
