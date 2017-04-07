@@ -89,8 +89,7 @@ forced = yes
 EOF
 
 # Run checkbox-converged with the launcher
-#QT_AUTO_SCREEN_SCALE_FACTOR=1 checkbox-cli launcher.conf
-QT_AUTO_SCREEN_SCALE_FACTOR=1 qmlscene "$QML" --launcher=launcher.conf
+qmlscene "$QML" --launcher=launcher.conf || true
 
 if [ -n "$2" ]
 then
