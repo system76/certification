@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{{test}} Test Results - Certification</title>
+        <title>{{name}} - {{model}} - Certification</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -23,16 +23,22 @@
     <body class="container">
         <h2>Certification - Version {{version}}</h2>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{test}} Test Results</h3>
-            </div>
-            <table class="table table-bordered">
-                <tr><td>
-                    <a href="/view/{{model}}">Back to {{model}}</a>
-                </td></tr>
-            </table>
-        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>Test Results (<a href="/view/{{model}}">Back to {{model}}</a>)</th>
+                <th>Failed</th>
+                <th>Not Supported</th>
+                <th>Passed</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>{{name}}</td>
+                <td class="failed">{{failed}}</td>
+                <td class="not supported">{{not_supported}}</td>
+                <td class="passed">{{passed}}</td>
+                <td>{{total}}</td>
+            </tr>
+        </table>
 
         <div class="btn-group">
             <a class="btn btn-default" href="#details">Details</a>
@@ -50,7 +56,7 @@
             </tr>
             <tr>
                 <th>Test</th>
-                <td>{{test}}</td>
+                <td>{{name}}</td>
             </tr>
             {{#if data.kernel}}
                 <tr>

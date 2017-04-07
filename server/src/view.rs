@@ -62,12 +62,30 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
     struct Context {
         version: &'static str,
         model: String,
-        test: String,
+        name: String,
+        failed: usize,
+        passed: usize,
+        not_supported: usize,
+        total: usize,
         data: Test,
     }
 
+    let mut failed = 0;
+    let mut passed = 0;
+    let mut not_supported = 0;
+    let mut total = 0;
+
     let mut data = Test::from_str(&util::read_test(model, test)?)?;
     if let Some(ref mut results) = data.results {
+        for result in results.iter() {
+            match result.status.as_str() {
+                "failed" => failed += 1,
+                "passed" => passed += 1,
+                _ => not_supported += 1
+            }
+            total += 1;
+        }
+
         results.sort_by(|a, b| match a.status.cmp(&b.status) {
             cmp::Ordering::Equal => a.id.cmp(&b.id),
             not_equal => not_equal
@@ -77,7 +95,11 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
     Ok(Template::render("view/test", &Context {
         version: util::version(),
         model: model.to_string(),
-        test: test.to_string(),
+        name: test.to_string(),
+        failed: failed,
+        passed: passed,
+        not_supported: not_supported,
+        total: total,
         data: data
     }))
 }

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{{model}} Test Results - Certification</title>
+        <title>{{model}} - Certification</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -23,56 +23,23 @@
     <body class="container">
         <h2>Certification - Version {{version}}</h2>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{model}} Test Results</h3>
-            </div>
-            <table class="table table-bordered">
+        <table class="table table-bordered">
+            <tr>
+                <th>{{model}} Tests (<a href="/">Back to Index</a>)</th>
+                <th>Failed</th>
+                <th>Not Supported</th>
+                <th>Passed</th>
+                <th>Total</th>
+            </tr>
+            {{#each tests}}
                 <tr>
-                    <th><a href="/">Back to Index</a></th>
-                    <th>Failed</th>
-                    <th>Not Supported</th>
-                    <th>Passed</th>
-                    <th>Total</th>
+                <td><a href="/view/{{../model}}/{{name}}">{{name}}</a></td>
+                <td class="failed">{{failed}}</td>
+                <td class="not supported">{{not_supported}}</td>
+                <td class="passed">{{passed}}</td>
+                <td>{{total}}</td>
                 </tr>
-                {{#each tests}}
-                    <tr>
-                    <td><a href="/view/{{../model}}/{{name}}">{{name}}</a></td>
-                    <td class="failed">{{failed}}</td>
-                    <td class="not supported">{{not_supported}}</td>
-                    <td class="passed">{{passed}}</td>
-                    <td>{{total}}</td>
-                    </tr>
-                {{/each}}
-            </table>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Upload Test Results</h3>
-            </div>
-            <div class="panel-body">
-                <form action="/upload" method="post" enctype="multipart/form-data" accept-charset="utf-8" style="max-width: 300px">
-                    <div class="form-group">
-                        <label for="model">Model:</label>
-                        <select class="form-control" id="model" name="model">
-                            <option value="{{model}}">{{model}}</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="test">Test:</label>
-                        <input class="form-control" type="text" id="test" name="test">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="file">Archive:</label>
-                        <input type="file" id="file" name="file">
-                    </div>
-
-                    <button class="btn btn-primary" type="submit">Upload</button>
-                </form>
-            </div>
-        </div>
+            {{/each}}
+        </table>
     </body>
 </html>
