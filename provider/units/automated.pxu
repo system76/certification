@@ -9,6 +9,7 @@ include:
 exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery
+    2013.com.canonical.certification::info/detect_recovery
     2013.com.canonical.certification::mediacard/sd-preinserted
     2013.com.canonical.certification::memory/check
     2013.com.canonical.certification::networking/http
@@ -20,5 +21,18 @@ exclude:
     2013.com.canonical.certification::suspend/bluetooth_obex_send_before_suspend
     2013.com.canonical.certification::suspend/record_playback_after_suspend_auto
     2013.com.canonical.certification::suspend/usb_storage_preinserted_after_suspend
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_open_ac_auto
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_open_bg_auto
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_open_n_auto
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_ac_auto
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_bg_auto
+    2013.com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_n_auto
     2013.com.canonical.certification::usb/storage-preinserted
+    2013.com.canonical.certification::wireless/monitor_wireless_connection_udp
+    2013.com.canonical.certification::wireless/wireless_connection_open_ac
+    2013.com.canonical.certification::wireless/wireless_connection_open_bg
+    2013.com.canonical.certification::wireless/wireless_connection_open_n
+    2013.com.canonical.certification::wireless/wireless_connection_wpa_ac
+    2013.com.canonical.certification::wireless/wireless_connection_wpa_bg
+    2013.com.canonical.certification::wireless/wireless_connection_wpa_n
 
