@@ -65,7 +65,7 @@ fn model(model: &str) -> io::Result<Template> {
         });
     }
 
-    Ok(Template::render("view/model", &Context {
+    Ok(Template::render("model", &Context {
         version: util::version(),
         model: model.to_string(),
         tests: tests
@@ -121,7 +121,7 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
         name = parts.next().unwrap_or("").to_string();
     }
 
-    Ok(Template::render("view/test", &Context {
+    Ok(Template::render("test", &Context {
         version: util::version(),
         model: model.to_string(),
         test: test.to_string(),
