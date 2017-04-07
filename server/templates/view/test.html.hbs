@@ -21,24 +21,7 @@
         </style>
     </head>
     <body class="container">
-        <h2>Certification - Version {{version}}</h2>
-
-        <table class="table table-bordered">
-            <tr>
-                <th>Test Results (<a href="/view/{{model}}">Back to {{model}}</a>)</th>
-                <th>Failed</th>
-                <th>Not Supported</th>
-                <th>Passed</th>
-                <th>Total</th>
-            </tr>
-            <tr>
-                <td>{{name}}</td>
-                <td class="failed">{{failed}}</td>
-                <td class="not supported">{{not_supported}}</td>
-                <td class="passed">{{passed}}</td>
-                <td>{{total}}</td>
-            </tr>
-        </table>
+        <h2><a href="/">Certification - Version {{version}}</a> &gt; <a href="/view/{{model}}">{{model}}</a> &gt; {{name}}</h2>
 
         <div class="btn-group">
             <a class="btn btn-default" href="#details">Details</a>
@@ -51,12 +34,20 @@
         <table class="table table-bordered">
             <caption><h4>Details</h4></caption>
             <tr>
-                <th>Model</th>
-                <td>{{model}}</td>
+                <th>Failed</th>
+                <td class="failed">{{failed}}</td>
             </tr>
             <tr>
-                <th>Test</th>
-                <td>{{name}}</td>
+                <th>Not Supported</th>
+                <td class="not supported">{{not_supported}}</td>
+            </tr>
+            <tr>
+                <th>Passed</th>
+                <td class="passed">{{passed}}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>{{total}}</td>
             </tr>
             {{#if data.kernel}}
                 <tr>

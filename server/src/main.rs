@@ -22,6 +22,7 @@ fn index() -> io::Result<Template> {
     #[derive(Serialize)]
     struct ModelRow {
         name: String,
+        test_count: usize,
         test: String,
         failed: usize,
         passed: usize,
@@ -37,7 +38,9 @@ fn index() -> io::Result<Template> {
 
     let mut models = Vec::new();
     for model in util::list_models()? {
-        if let Some(test) = util::list_tests(&model)?.pop() {
+        let mut tests = util::list_tests(&model)?;
+        let test_count = tests.len();
+        if let Some(test) = tests.pop() {
             let data = Test::from_str(&util::read_test(&model, &test)?)?;
 
             let mut failed = 0;
@@ -57,6 +60,7 @@ fn index() -> io::Result<Template> {
 
             models.push(ModelRow {
                 name: model,
+                test_count: test_count,
                 test: test,
                 failed: failed,
                 passed: passed,

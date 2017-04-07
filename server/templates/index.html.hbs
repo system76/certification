@@ -26,7 +26,8 @@
         <table class="table table-bordered">
             <tr>
                 <th>Model</th>
-                <th>Test</th>
+                <th>Tests</th>
+                <th>Latest Test</th>
                 <th>Failed</th>
                 <th>Not Supported</th>
                 <th>Passed</th>
@@ -35,6 +36,7 @@
             {{#each models}}
                 <tr>
                     <td><a href="/view/{{name}}">{{name}}</a></td>
+                    <td>{{test_count}}</td>
                     <td>{{test}}</td>
                     <td class="failed">{{failed}}</td>
                     <td class="not supported">{{not_supported}}</td>
