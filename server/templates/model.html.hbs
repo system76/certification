@@ -34,7 +34,7 @@
             </tr>
             {{#each tests}}
                 <tr>
-                <td><a href="/view/{{../model}}/{{test}}">{{name}}</a></td>
+                <td><a href="/{{../model}}/{{test}}">{{name}}</a></td>
                 <td>{{date}} {{time}}</td>
                 <td class="failed">{{failed}}</td>
                 <td class="not supported">{{not_supported}}</td>
@@ -43,7 +43,5 @@
                 </tr>
             {{/each}}
         </table>
-
-        Version {{version}}
     </body>
 </html>

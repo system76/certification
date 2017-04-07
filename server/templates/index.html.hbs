@@ -36,9 +36,9 @@
             </tr>
             {{#each models}}
                 <tr>
-                    <td><a href="/view/{{model}}">{{model}}</a></td>
+                    <td><a href="/{{model}}">{{model}}</a></td>
                     <td>{{test_count}}</td>
-                    <td><a href="/view/{{model}}/{{test}}">{{name}}</a></td>
+                    <td><a href="/{{model}}/{{test}}">{{name}}</a></td>
                     <td>{{date}} {{time}}</td>
                     <td class="failed">{{failed}}</td>
                     <td class="not supported">{{not_supported}}</td>
@@ -47,7 +47,5 @@
                 </tr>
             {{/each}}
         </table>
-
-        Version {{version}}
     </body>
 </html>

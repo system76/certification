@@ -132,5 +132,5 @@ impl FromData for Upload {
 #[post("/upload", data="<upload>")]
 fn index(upload: Upload) -> io::Result<Redirect> {
     let (model, test) = util::create_test(&upload.model, &upload.test, &upload.file)?;
-    Ok(Redirect::to(&format!("/view/{}/{}", model, test)))
+    Ok(Redirect::to(&format!("/{}/{}", model, test)))
 }

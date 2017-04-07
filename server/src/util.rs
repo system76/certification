@@ -2,10 +2,6 @@ use multipart::server::save::SavedFile;
 use std::{fs, path, io};
 use std::io::Read;
 
-pub fn version() -> &'static str {
-    env!("CARGO_PKG_VERSION")
-}
-
 pub fn create_model(model: &str) -> io::Result<String> {
     let model = sanitize(model)?;
 
