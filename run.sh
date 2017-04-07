@@ -94,7 +94,7 @@ QT_AUTO_SCREEN_SCALE_FACTOR=1 qmlscene "$QML" --launcher=launcher.conf
 
 if [ -n "$2" ]
 then
-  SERVER="http://localhost:8000"
+  SERVER="http://10.17.75.229:8000"
   MODEL="$2"
   TEST="$(date "+%F_%T")_$PLAN"
   echo "Uploading report.json to $SERVER/view/$MODEL/$TEST"
