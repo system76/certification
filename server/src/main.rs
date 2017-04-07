@@ -21,9 +21,12 @@ mod view;
 fn index() -> io::Result<Template> {
     #[derive(Serialize)]
     struct ModelRow {
-        name: String,
+        model: String,
         test_count: usize,
         test: String,
+        name: String,
+        date: String,
+        time: String,
         failed: usize,
         passed: usize,
         not_supported: usize,
@@ -58,10 +61,23 @@ fn index() -> io::Result<Template> {
                 }
             }
 
+            let name;
+            let date;
+            let time;
+            {
+                let mut parts = test.split('_');
+                date = parts.next().unwrap_or("").to_string();
+                time = parts.next().unwrap_or("").to_string();
+                name = parts.next().unwrap_or("").to_string();
+            }
+
             models.push(ModelRow {
-                name: model,
+                model: model,
                 test_count: test_count,
                 test: test,
+                name: name,
+                date: date,
+                time: time,
                 failed: failed,
                 passed: passed,
                 not_supported: not_supported,

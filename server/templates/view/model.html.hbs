@@ -26,6 +26,7 @@
         <table class="table table-bordered">
             <tr>
                 <th>Test</th>
+                <th>Time</th>
                 <th>Failed</th>
                 <th>Not Supported</th>
                 <th>Passed</th>
@@ -33,7 +34,8 @@
             </tr>
             {{#each tests}}
                 <tr>
-                <td><a href="/view/{{../model}}/{{name}}">{{name}}</a></td>
+                <td><a href="/view/{{../model}}/{{test}}">{{name}}</a></td>
+                <td>{{date}} {{time}}</td>
                 <td class="failed">{{failed}}</td>
                 <td class="not supported">{{not_supported}}</td>
                 <td class="passed">{{passed}}</td>

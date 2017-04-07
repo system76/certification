@@ -7,7 +7,10 @@ use util;
 fn model(model: &str) -> io::Result<Template> {
     #[derive(Serialize)]
     struct TestRow {
+        test: String,
         name: String,
+        date: String,
+        time: String,
         failed: usize,
         passed: usize,
         not_supported: usize,
@@ -40,8 +43,21 @@ fn model(model: &str) -> io::Result<Template> {
             }
         }
 
+        let name;
+        let date;
+        let time;
+        {
+            let mut parts = test.split('_');
+            date = parts.next().unwrap_or("").to_string();
+            time = parts.next().unwrap_or("").to_string();
+            name = parts.next().unwrap_or("").to_string();
+        }
+
         tests.push(TestRow {
-            name: test,
+            test: test,
+            name: name,
+            date: date,
+            time: time,
             failed: failed,
             passed: passed,
             not_supported: not_supported,
@@ -62,7 +78,10 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
     struct Context {
         version: &'static str,
         model: String,
+        test: String,
         name: String,
+        date: String,
+        time: String,
         failed: usize,
         passed: usize,
         not_supported: usize,
@@ -92,10 +111,23 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
         });
     }
 
+    let name;
+    let date;
+    let time;
+    {
+        let mut parts = test.split('_');
+        date = parts.next().unwrap_or("").to_string();
+        time = parts.next().unwrap_or("").to_string();
+        name = parts.next().unwrap_or("").to_string();
+    }
+
     Ok(Template::render("view/test", &Context {
         version: util::version(),
         model: model.to_string(),
-        name: test.to_string(),
+        test: test.to_string(),
+        name: name,
+        date: date,
+        time: time,
         failed: failed,
         passed: passed,
         not_supported: not_supported,

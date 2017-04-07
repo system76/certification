@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="container">
-        <h2><a href="/">Certification - Version {{version}}</a> &gt; <a href="/view/{{model}}">{{model}}</a> &gt; {{name}}</h2>
+        <h2><a href="/">Certification - Version {{version}}</a> &gt; <a href="/view/{{model}}">{{model}}</a> &gt; {{name}} &gt; {{date}} {{time}}</h2>
 
         <div class="btn-group">
             <a class="btn btn-default" href="#details">Details</a>
@@ -33,6 +33,9 @@
         <a id="details"></a>
         <table class="table table-bordered">
             <caption><h4>Details</h4></caption>
+            <tr>
+                <th>Time</th>
+                <td>{{date}} {{time}}</td>
             <tr>
                 <th>Failed</th>
                 <td class="failed">{{failed}}</td>

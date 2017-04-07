@@ -28,6 +28,7 @@
                 <th>Model</th>
                 <th>Tests</th>
                 <th>Latest Test</th>
+                <th>Time</th>
                 <th>Failed</th>
                 <th>Not Supported</th>
                 <th>Passed</th>
@@ -35,9 +36,10 @@
             </tr>
             {{#each models}}
                 <tr>
-                    <td><a href="/view/{{name}}">{{name}}</a></td>
+                    <td><a href="/view/{{model}}">{{model}}</a></td>
                     <td>{{test_count}}</td>
-                    <td>{{test}}</td>
+                    <td><a href="/view/{{model}}/{{test}}">{{name}}</a></td>
+                    <td>{{date}} {{time}}</td>
                     <td class="failed">{{failed}}</td>
                     <td class="not supported">{{not_supported}}</td>
                     <td class="passed">{{passed}}</td>
