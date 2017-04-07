@@ -8,6 +8,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            td.passed {
+                background-color: #00FF00
+            }
+            td.not.supported {
+                background-color: #FFFF00
+            }
+            td.failed {
+                background-color: #FF0000
+            }
+        </style>
     </head>
     <body class="container">
         <h2>Certification - Version {{version}}</h2>
@@ -17,12 +28,20 @@
                 <h3 class="panel-title">{{model}} Test Results</h3>
             </div>
             <table class="table table-bordered">
-                <tr><td>
-                    <a href="/">Back to Index</a>
-                </td></tr>
+                <tr>
+                    <th><a href="/">Back to Index</a></th>
+                    <th>Failed</th>
+                    <th>Not Supported</th>
+                    <th>Passed</th>
+                    <th>Total</th>
+                </tr>
                 {{#each tests}}
                     <tr>
-                    <td><a href="/view/{{../model}}/{{this}}">{{this}}</a></td>
+                    <td><a href="/view/{{../model}}/{{name}}">{{name}}</a></td>
+                    <td class="failed">{{failed}}</td>
+                    <td class="not supported">{{not_supported}}</td>
+                    <td class="passed">{{passed}}</td>
+                    <td>{{total}}</td>
                     </tr>
                 {{/each}}
             </table>

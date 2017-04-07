@@ -85,31 +85,34 @@
         <table>
 
         <a id="results"></a>
-        <table class="table table-bordered">
+        <div class="table-responsive"><table class="table table-bordered">
         {{#if data.results}}
             <caption><h4>Results</h4></caption>
             <tr>
                 <th>Result</th>
                 <th>Name</th>
-                <th>Comments</th>
+                <th>Details</th>
             </tr>
             {{#each data.results}}
                 <tr>
-                    <td class="{{status}}">{{status}}</td>
+                    <td class="{{status}}" style="white-space: nowrap;">{{status}}</td>
                     <td>
-                        {{#if name}}
-                            <span title="{{id}}">{{name}}</span>
-                        {{else}}
-                            {{id}}
+                        <span title="{{id}}" onclick="alert('{{id}}')">{{name}}</span>
+                    </td>
+                    <td>
+                        {{#if comments}}
+                            <code style="max-width: 600px; max-height: 100px; overflow: auto;">{{comments}}</code>
+                        {{/if}}
+                        {{#if io_log}}
+                            <pre style="max-width: 600px; max-height: 100px; overflow: auto;">{{io_log}}</pre>
                         {{/if}}
                     </td>
-                    <td>{{comments}}</td>
                 </tr>
             {{/each}}
         {{else}}
             <caption><h4>No Result Information</h4></caption>
         {{/if}}
-        <table>
+        <table></div>
 
         <a id="modules"></a>
         <table class="table table-bordered">
