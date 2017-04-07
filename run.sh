@@ -96,6 +96,6 @@ then
   SERVER="http://10.17.75.229:8000"
   MODEL="$2"
   TEST="$(date "+%F_%T")_$PLAN"
-  echo "Uploading report.json to $SERVER/view/$MODEL/$TEST"
+  echo "Uploading report.json to $SERVER/$MODEL/$TEST"
   curl -F "model=$MODEL" -F "test=$TEST" -F "file=@report.json" "$SERVER/upload"
 fi
