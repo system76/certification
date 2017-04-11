@@ -9,14 +9,17 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <style>
-            td.passed {
-                background-color: #00FF00
-            }
-            td.not.supported {
-                background-color: #FFFF00
-            }
             td.failed {
                 background-color: #FF0000
+            }
+            td.not.supported {
+                background-color: #FF8000
+            }
+            td.skipped {
+                background-color: #FFFF00
+            }
+            td.passed {
+                background-color: #00FF00
             }
         </style>
     </head>
@@ -29,6 +32,7 @@
                 <th>Time</th>
                 <th>Failed</th>
                 <th>Not Supported</th>
+                <th>Skipped</th>
                 <th>Passed</th>
                 <th>Total</th>
             </tr>
@@ -38,6 +42,7 @@
                 <td>{{date}} {{time}}</td>
                 <td class="failed">{{failed}}</td>
                 <td class="not supported">{{not_supported}}</td>
+                <td class="skipped">{{skipped}}</td>
                 <td class="passed">{{passed}}</td>
                 <td>{{total}}</td>
                 </tr>

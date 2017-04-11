@@ -14,8 +14,9 @@ fn index() -> io::Result<Template> {
         date: String,
         time: String,
         failed: usize,
-        passed: usize,
         not_supported: usize,
+        passed: usize,
+        skipped: usize,
         total: usize,
     }
 
@@ -32,15 +33,18 @@ fn index() -> io::Result<Template> {
             let data = Test::from_str(&util::read_test(&model, &test)?)?;
 
             let mut failed = 0;
-            let mut passed = 0;
             let mut not_supported = 0;
+            let mut passed = 0;
+            let mut skipped = 0;
             let mut total = 0;
             if let Some(results) = data.results {
                 for result in results {
                     match result.status.as_str() {
                         "failed" => failed += 1,
                         "passed" => passed += 1,
-                        _ => not_supported += 1
+                        "not supported" => not_supported += 1,
+                        "skipped" => skipped += 1,
+                        status => println!("Unknown status {}", status)
                     }
                     total += 1;
                 }
@@ -64,8 +68,9 @@ fn index() -> io::Result<Template> {
                 date: date,
                 time: time,
                 failed: failed,
-                passed: passed,
                 not_supported: not_supported,
+                passed: passed,
+                skipped: skipped,
                 total: total,
             });
         }
@@ -85,8 +90,9 @@ fn model(model: &str) -> io::Result<Template> {
         date: String,
         time: String,
         failed: usize,
-        passed: usize,
         not_supported: usize,
+        passed: usize,
+        skipped: usize,
         total: usize,
     }
 
@@ -101,15 +107,18 @@ fn model(model: &str) -> io::Result<Template> {
         let data = Test::from_str(&util::read_test(model, &test)?)?;
 
         let mut failed = 0;
-        let mut passed = 0;
         let mut not_supported = 0;
+        let mut passed = 0;
+        let mut skipped = 0;
         let mut total = 0;
         if let Some(results) = data.results {
             for result in results {
                 match result.status.as_str() {
                     "failed" => failed += 1,
                     "passed" => passed += 1,
-                    _ => not_supported += 1
+                    "not supported" => not_supported += 1,
+                    "skipped" => skipped += 1,
+                    status => println!("Unknown status {}", status)
                 }
                 total += 1;
             }
@@ -131,8 +140,9 @@ fn model(model: &str) -> io::Result<Template> {
             date: date,
             time: time,
             failed: failed,
-            passed: passed,
             not_supported: not_supported,
+            passed: passed,
+            skipped: skipped,
             total: total,
         });
     }
@@ -153,24 +163,27 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
         date: String,
         time: String,
         failed: usize,
-        passed: usize,
         not_supported: usize,
+        passed: usize,
+        skipped: usize,
         total: usize,
         data: Test,
     }
 
     let mut failed = 0;
-    let mut passed = 0;
     let mut not_supported = 0;
+    let mut passed = 0;
+    let mut skipped = 0;
     let mut total = 0;
-
     let mut data = Test::from_str(&util::read_test(model, test)?)?;
     if let Some(ref mut results) = data.results {
         for result in results.iter() {
             match result.status.as_str() {
                 "failed" => failed += 1,
                 "passed" => passed += 1,
-                _ => not_supported += 1
+                "not supported" => not_supported += 1,
+                "skipped" => skipped += 1,
+                status => println!("Unknown status {}", status)
             }
             total += 1;
         }
@@ -198,8 +211,9 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
         date: date,
         time: time,
         failed: failed,
-        passed: passed,
         not_supported: not_supported,
+        passed: passed,
+        skipped: skipped,
         total: total,
         data: data
     }))
