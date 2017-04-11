@@ -93,7 +93,7 @@ qmlscene "$QML" --launcher=launcher.conf || true
 
 if [ -n "$2" ]
 then
-  SERVER="http://10.17.75.229:8000"
+  SERVER="http://10.17.75.78:8000"
   MODEL="$2"
   TEST="$(date "+%F_%T")_$PLAN"
   echo "Uploading report.json to $SERVER/$MODEL/$TEST"
