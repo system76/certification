@@ -1,0 +1,46 @@
+unit: test plan
+id: monitor
+_name: System76 Manual Monitor Test Plan
+_description: Manual monitor jobs
+estimated_duration: 5m
+include:
+    monitor/.*
+
+unit: job
+id: monitor/displayport_video
+_summary: Test DisplayPort monitor video
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a DisplayPort monitor and verify that it is usable.
+
+
+unit: job
+id: monitor/displayport_audio
+_summary: Test DisplayPort monitor audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test audio on a DisplayPort monitor
+
+
+unit: job
+id: monitor/hdmi_video
+_summary: Test HDMI monitor video
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a HDMI monitor and verify that it is usable.
+
+
+unit: job
+id: monitor/hdmi_audio
+_summary: Test HDMI monitor audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test audio on a HDMI monitor
