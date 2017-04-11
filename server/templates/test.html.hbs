@@ -13,13 +13,13 @@
                 background-color: #FF0000
             }
             td.not.supported {
-                background-color: #FF8000
-            }
-            td.skipped {
                 background-color: #FFFF00
             }
             td.passed {
                 background-color: #00FF00
+            }
+            td.skipped {
+                background-color: #00FFFF
             }
         </style>
     </head>
@@ -48,12 +48,12 @@
                 <td class="not supported">{{not_supported}}</td>
             </tr>
             <tr>
-                <th>Skipped</th>
-                <td class="skipped">{{skipped}}</td>
-            </tr>
-            <tr>
                 <th>Passed</th>
                 <td class="passed">{{passed}}</td>
+            </tr>
+            <tr>
+                <th>Skipped</th>
+                <td class="skipped">{{skipped}}</td>
             </tr>
             <tr>
                 <th>Total</th>
