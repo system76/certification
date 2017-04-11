@@ -9,9 +9,14 @@ include:
 exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery
+        2013.com.canonical.certification::dell_bto_xml_attachment
+        2013.com.canonical.certification::dell_bto_xml_attachment_json
     2013.com.canonical.certification::info/detect_recovery
+        2013.com.canonical.certification::recovery_info_attachment
+        2013.com.canonical.certification::recovery_info_attachment_json
     2013.com.canonical.certification::mediacard/sd-preinserted
     2013.com.canonical.certification::memory/check
+    2013.com.canonical.certification::miscellanea/submission-resources
     2013.com.canonical.certification::networking/http
     2013.com.canonical.certification::suspend/bluetooth_obex_browse_after_suspend_auto
     2013.com.canonical.certification::suspend/bluetooth_obex_browse_before_suspend
