@@ -5,8 +5,14 @@ _description: Manual touchpad jobs
 estimated_duration: 5m
 include:
     touchpad/.*
+    2013.com.canonical.certification::touchpad/.*
+
+unit: category
+id: touchpad_category
+_name: System76 Touchpad Tests
 
 unit: job
+category_id: touchpad_category
 id: touchpad/tap_to_click
 _summary: Enabled tap to click
 plugin: user-interact-verify
@@ -17,6 +23,7 @@ _description:
     Test that tap to click has been enabled
 
 unit: job
+category_id: touchpad_category
 id: touchpad/disable_tap_to_click
 _summary: Disabled tap to click
 plugin: user-interact-verify

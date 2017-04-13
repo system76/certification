@@ -6,7 +6,12 @@ estimated_duration: 5m
 include:
     hotkey/.*
 
+unit: category
+id: hotkey_category
+_name: System76 Hotkey Tests
+
 unit: job
+category_id: hotkey_category
 id: hotkey/touchpad_toggle
 _summary: Test the touchpad toggle
 plugin: manual
@@ -16,6 +21,7 @@ _description:
     The touchpad should turn off. Pressing the key again should turn it back on.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/lcd_toggle
 _summary: LCD toggle hotkey
 plugin: manual
@@ -25,6 +31,7 @@ _description:
     The LCD screen should turn off. Pressing the key again should turn it back on.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/mute
 _summary: Mute hotkey
 plugin: manual
@@ -34,6 +41,7 @@ _description:
     The volume indicator should change, and a notification should pop up.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/volume
 _summary: Volume up and down hotkeys
 plugin: manual
@@ -43,6 +51,7 @@ _description:
     The volume indicator should change, and a notification should pop up.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/display_switch
 _summary: Display switch hotkey
 plugin: manual
@@ -52,6 +61,7 @@ _description:
     TODO
 
 unit: job
+category_id: hotkey_category
 id: hotkey/brightness
 _summary: Brightness up and down hotkeys
 plugin: manual
@@ -61,6 +71,7 @@ _description:
     The screen brightness should change, and a notification should pop up.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/camera_toggle
 _summary: Camera toggle hotkey
 plugin: manual
@@ -70,6 +81,7 @@ _description:
     The camera should be disabled. Pressing the key again will enable it.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/airplane_mode
 _summary: Airplane mode hotkey
 plugin: manual
@@ -80,6 +92,7 @@ _description:
     The airplane mode light should also toggle on and off.
 
 unit: job
+category_id: hotkey_category
 id: hotkey/suspend
 _summary: Suspend hotkey
 plugin: manual
