@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of versions.
+versions = [
+    'bonw12',
+    'galp2',
+    'gaze12',
+    'kudu4',
+    'lemu6',
+    'lemu7',
+    'oryp2',
+    'oryp2-ess',
+    'oryp3',
+    'oryp3-ess',
+    'serw10'
+]
+
+result = subprocess.run(['dmidecode', '-s', 'system-version'], stdout=subprocess.PIPE)
+result.check_returncode()
+version = result.stdout.decode('utf-8').strip()
+
+if version in versions:
+    print(version)
+else:
+    print('Unknown: %s' % (version))
+    sys.exit(1)

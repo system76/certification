@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of products.
+products = [
+    'Bonobo WS',
+    'Galago Pro',
+    'Gazelle',
+    'Kudu',
+    'Lemur',
+    'Oryx Pro',
+    'Serval WS'
+]
+
+result = subprocess.run(['dmidecode', '-s', 'system-product-name'], stdout=subprocess.PIPE)
+result.check_returncode()
+product = result.stdout.decode('utf-8').strip()
+
+if product in products:
+    print(product)
+else:
+    print('Unknown: %s' % (product))
+    sys.exit(1)

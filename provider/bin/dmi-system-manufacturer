@@ -5,8 +5,8 @@ import sys
 
 # List of manufacturers.
 manufacturers = [
-    "System76",
-    "System76, Inc."
+    'System76',
+    'System76, Inc.'
 ]
 
 result = subprocess.run(['dmidecode', '-s', 'system-manufacturer'], stdout=subprocess.PIPE)
@@ -16,5 +16,5 @@ manufacturer = result.stdout.decode('utf-8').strip()
 if manufacturer in manufacturers:
     print(manufacturer)
 else:
-    print('Unknown manufacturer: %s' % (manufacturer))
+    print('Unknown: %s' % (manufacturer))
     sys.exit(1)

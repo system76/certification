@@ -72,9 +72,9 @@ _summary: Firmware system manufacturer
 plugin: shell
 estimated_duration: 30s
 user: root
-command: manufacturer_test
+command: dmi-system-manufacturer
 _description:
-    Retrieve the system manufacturer
+    Retrieve and test the system manufacturer
 
 unit: job
 category_id: firmware_category
@@ -83,9 +83,9 @@ _summary: Firmware system product
 plugin: shell
 estimated_duration: 30s
 user: root
-command: dmidecode -s system-product-name
+command: dmi-system-product
 _description:
-    Retrieve the system product name
+    Retrieve and test the system product name
 
 unit: job
 category_id: firmware_category
@@ -94,6 +94,6 @@ _summary: Firmware system version
 plugin: shell
 estimated_duration: 30s
 user: root
-command: dmidecode -s system-version
+command: dmi-system-version
 _description:
-    Retrieve the system version
+    Retrieve and test the system version
