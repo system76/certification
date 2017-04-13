@@ -5,7 +5,6 @@ _description: Manual touchpad jobs
 estimated_duration: 5m
 include:
     touchpad/.*
-    2013.com.canonical.certification::touchpad/.*
 
 unit: category
 id: touchpad_category
