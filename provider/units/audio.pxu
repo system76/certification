@@ -1,0 +1,71 @@
+unit: test plan
+id: audio
+_name: System76 Manual Audio Test Plan
+_description: Manual audio jobs
+estimated_duration: 5m
+include:
+    audio/.*
+
+unit: category
+id: audio_category
+_name: System76 Audio Tests
+
+unit: job
+category_id: audio_category
+id: audio/speaker
+_summary: Test speaker audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test speaker output.
+
+unit: job
+category_id: audio_category
+id: audio/headphone
+_summary: Test headphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in headphones and test headphone jack output. Ensure that the speakers are muted.
+
+unit: job
+category_id: audio_category
+id: audio/line_out
+_summary: Test line out audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a line out device and test line out jack output. Ensure that the speakers are muted.
+
+unit: job
+category_id: audio_category
+id: audio/internal_microphone
+_summary: Test internal microphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test internal microphone input.
+
+unit: job
+category_id: audio_category
+id: audio/microphone
+_summary: Test microphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a microphone and test microphone jack input.
+
+unit: job
+category_id: audio_category
+id: audio/line_in
+_summary: Test line in audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a line in device and test line in jack input.

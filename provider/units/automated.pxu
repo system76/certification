@@ -4,8 +4,8 @@ _name: System76 Automated Test Plan
 _description: Automated jobs
 estimated_duration: 10m
 nested_part:
+    firmware
     2013.com.canonical.certification::autotesting
-include:
 exclude:
     2013.com.canonical.certification::audio/alsa_record_playback_automated
     2013.com.canonical.certification::info/detect_dell_recovery
@@ -40,4 +40,3 @@ exclude:
     2013.com.canonical.certification::wireless/wireless_connection_wpa_ac
     2013.com.canonical.certification::wireless/wireless_connection_wpa_bg
     2013.com.canonical.certification::wireless/wireless_connection_wpa_n
-

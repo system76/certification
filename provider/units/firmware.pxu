@@ -1,0 +1,99 @@
+unit: test plan
+id: firmware
+_name: System76 Firmware Test Plan
+_description: Firmware jobs
+estimated_duration: 30s
+include:
+    firmware/.*
+
+unit: category
+id: firmware_category
+_name: System76 Firmware Tests
+
+unit: job
+category_id: firmware_category
+id: firmware/bios_release_date
+_summary: Firmware BIOS release date
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s bios-release-date
+_description:
+    Retrieve the BIOS release date
+
+unit: job
+category_id: firmware_category
+id: firmware/bios_vendor
+_summary: Firmware BIOS vendor
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s bios-vendor
+_description:
+    Retrieve the BIOS vendor
+
+unit: job
+category_id: firmware_category
+id: firmware/bios_version
+_summary: Firmware BIOS version
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s bios-version
+_description:
+    Retrieve the BIOS version
+
+unit: job
+category_id: firmware_category
+id: firmware/ec_project
+_summary: Firmware EC project
+plugin: shell
+estimated_duration: 30s
+user: root
+command: ecflash | grep '  Project: ' | cut -d ' ' -f4-
+_description:
+    Retrieve the EC flash project
+
+unit: job
+category_id: firmware_category
+id: firmware/ec_version
+_summary: Firmware EC version
+plugin: shell
+estimated_duration: 30s
+user: root
+command: ecflash | grep '  Version: ' | cut -d ' ' -f4-
+_description:
+    Retrieve the EC flash version
+
+unit: job
+category_id: firmware_category
+id: firmware/system_manufacturer
+_summary: Firmware system manufacturer
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s system-manufacturer
+_description:
+    Retrieve the system manufacturer
+
+unit: job
+category_id: firmware_category
+id: firmware/system_product
+_summary: Firmware system product
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s system-product-name
+_description:
+    Retrieve the system product name
+
+unit: job
+category_id: firmware_category
+id: firmware/system_version
+_summary: Firmware system version
+plugin: shell
+estimated_duration: 30s
+user: root
+command: dmidecode -s system-version
+_description:
+    Retrieve the system version

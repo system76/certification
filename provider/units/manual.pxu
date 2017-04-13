@@ -5,6 +5,7 @@ _description: Manual jobs
 estimated_duration: 10m
 nested_part:
     hotkey
+    audio
     monitor
     touchpad
 include:
