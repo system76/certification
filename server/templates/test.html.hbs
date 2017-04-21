@@ -30,6 +30,7 @@
             <a class="btn btn-default" href="#details">Details</a>
             <a class="btn btn-default" href="#results">Results</a>
             <a class="btn btn-default" href="#modules">Modules</a>
+            <a class="btn btn-default" href="#devices">Devices</a>
             <a class="btn btn-default" href="#packages">Packages</a>
         </div>
 
@@ -104,7 +105,7 @@
                 <tr>
                     <td class="{{status}}" style="white-space: nowrap;">{{status}}</td>
                     <td>
-                        <span title="{{id}}" onclick="alert('{{id}}')">{{name}}</span>
+                        <span title="{{id}}">{{name}}</span>
                     </td>
                     <td>
                         {{#if comments}}
@@ -133,6 +134,60 @@
                 <tr>
                     <td>{{module}}</td>
                     <td>{{options}}</td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <caption><h4>No Module Information</h4></caption>
+        {{/if}}
+        <table>
+
+        <a id="devices"></a>
+        <table class="table table-bordered">
+        {{#if data.devices}}
+            <caption><h4>Devices</h4></caption>
+            <tr>
+                <th>Category</th>
+                <th>Vendor</th>
+                <th>Product</th>
+                <th>Details</th>
+            </tr>
+            {{#each data.devices}}
+                <tr>
+                    <td>
+                        <span title="{{path}}">
+                            {{bus}}
+                            {{#if category}}[{{category}}]{{/if}}
+                        </span>
+
+                    </td>
+                    <td>
+                        <span {{#if vendor_slug}}title="{{vendor_slug}}"{{/if}}>
+                            {{vendor}}
+                            {{#if vendor_id}}[{{vendor_id}}]{{/if}}
+                            {{#if subvendor_id}}({{subvendor_id}}){{/if}}
+                        </span>
+                    </td>
+                    <td>
+                        <span {{#if product_slug}}title="{{product_slug}}"{{/if}}>
+                            {{product}}
+                            {{#if product_id}}[{{product_id}}]{{/if}}
+                            {{#if subproduct_id}}({{subproduct_id}}){{/if}}
+                        </span>
+                    </td>
+                    <td>
+                        {{#if driver}}
+                            <p>Driver: {{driver}}</p>
+                        {{/if}}
+                        {{#if name}}
+                            <p>Name: {{name}}</p>
+                        {{/if}}
+                        {{#if interface}}
+                            <p>Interface: {{interface}}</p>
+                        {{/if}}
+                        {{#if mac}}
+                            <p>MAC: {{mac}}</p>
+                        {{/if}}
+                    </td>
                 </tr>
             {{/each}}
         {{else}}

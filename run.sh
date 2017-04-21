@@ -30,7 +30,7 @@ python3 manage.py develop -f
 cd ..
 
 # Create report directory
-REPORT="report/$PLAN/"
+REPORT="tests/$PLAN/"
 mkdir -p "$REPORT"
 cd "$REPORT"
 
