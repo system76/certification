@@ -6,5 +6,3 @@ sudo apt update -y
 sudo apt install -y checkbox-ng checkbox-converged \
                     plainbox-provider-certification-client \
                     net-tools
-
-git submodule update --init --remote
