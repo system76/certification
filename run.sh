@@ -1,13 +1,12 @@
 # Run tests using checkbox
 set -e
 
+
 # Check if checkbox-converged QML file is available
 QML="$PWD/checkbox-converged/checkbox-converged.qml"
 if [ ! -f "$QML" ]
 then
-    echo "$0: checkbox-converged not found" >&2
-    echo "    Please try running deps.sh" >&2
-    exit 1
+    git submodule update --init --remote
 fi
 
 # Check if provider is available
@@ -93,7 +92,7 @@ qmlscene "$QML" --launcher=launcher.conf || true
 
 if [ -n "$2" ]
 then
-  SERVER="http://10.17.75.78:8000"
+  SERVER="http://build-server:8000"
   MODEL="$2"
   TEST="$(date "+%F_%T")_$PLAN"
   echo "Uploading report.json to $SERVER/$MODEL/$TEST"
