@@ -14,9 +14,9 @@ products = [
     'Serval WS'
 ]
 
-result = subprocess.run(['dmidecode', '-s', 'system-product-name'], stdout=subprocess.PIPE)
-result.check_returncode()
-product = result.stdout.decode('utf-8').strip()
+fp = open('/sys/class/dmi/id/product_name')
+product = fp.read().strip()
+fp.close()
 
 if product in products:
     print(product)

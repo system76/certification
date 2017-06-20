@@ -16,8 +16,7 @@ id: firmware/bios_release_date
 _summary: Firmware BIOS release date
 plugin: shell
 estimated_duration: 30s
-user: root
-command: dmidecode -s bios-release-date
+command: cat /sys/class/dmi/id/bios_date
 _description:
     Retrieve the BIOS release date
 
@@ -27,8 +26,7 @@ id: firmware/bios_vendor
 _summary: Firmware BIOS vendor
 plugin: shell
 estimated_duration: 30s
-user: root
-command: dmidecode -s bios-vendor
+command: cat /sys/class/dmi/id/bios_vendor
 _description:
     Retrieve the BIOS vendor
 
@@ -38,8 +36,7 @@ id: firmware/bios_version
 _summary: Firmware BIOS version
 plugin: shell
 estimated_duration: 30s
-user: root
-command: dmidecode -s bios-version
+command: cat /sys/class/dmi/id/bios_version
 _description:
     Retrieve the BIOS version
 
@@ -71,7 +68,6 @@ id: firmware/system_manufacturer
 _summary: Firmware system manufacturer
 plugin: shell
 estimated_duration: 30s
-user: root
 command: dmi-system-manufacturer
 _description:
     Retrieve and test the system manufacturer
@@ -82,7 +78,6 @@ id: firmware/system_product
 _summary: Firmware system product
 plugin: shell
 estimated_duration: 30s
-user: root
 command: dmi-system-product
 _description:
     Retrieve and test the system product name
@@ -93,7 +88,6 @@ id: firmware/system_version
 _summary: Firmware system version
 plugin: shell
 estimated_duration: 30s
-user: root
 command: dmi-system-version
 _description:
     Retrieve and test the system version

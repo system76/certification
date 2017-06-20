@@ -9,9 +9,9 @@ manufacturers = [
     'System76, Inc.'
 ]
 
-result = subprocess.run(['dmidecode', '-s', 'system-manufacturer'], stdout=subprocess.PIPE)
-result.check_returncode()
-manufacturer = result.stdout.decode('utf-8').strip()
+fp = open('/sys/class/dmi/id/sys_vendor')
+manufacturer = fp.read().strip()
+fp.close()
 
 if manufacturer in manufacturers:
     print(manufacturer)

@@ -18,9 +18,9 @@ versions = [
     'serw10'
 ]
 
-result = subprocess.run(['dmidecode', '-s', 'system-version'], stdout=subprocess.PIPE)
-result.check_returncode()
-version = result.stdout.decode('utf-8').strip()
+fp = open('/sys/class/dmi/id/product_version')
+version = fp.read().strip()
+fp.close()
 
 if version in versions:
     print(version)
