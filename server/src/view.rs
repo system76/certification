@@ -41,7 +41,7 @@ fn index() -> io::Result<Template> {
                 for result in results {
                     match result.status.as_str() {
                         "failed" => failed += 1,
-                        "passed" => passed += 1,
+                        "pass" | "passed" => passed += 1,
                         "not supported" => not_supported += 1,
                         "skipped" => skipped += 1,
                         status => println!("Unknown status {}", status)

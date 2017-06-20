@@ -117,9 +117,12 @@ impl Test {
     }
 
     pub fn from_str(string: &str) -> io::Result<Test> {
-        match serde_json::from_str::<Vec<Test>>(&string) {
-            Ok(values) => Test::merge(values),
-            Err(error) => Err(io::Error::new(io::ErrorKind::Other, format!("{}", error)))
+        match serde_json::from_str::<Test>(&string) {
+            Ok(test) => Ok(test),
+            Err(_) => match serde_json::from_str::<Vec<Test>>(&string) {
+                Ok(values) => Test::merge(values),
+                Err(error) => Err(io::Error::new(io::ErrorKind::Other, format!("{}", error)))
+            }
         }
     }
 }

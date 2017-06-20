@@ -8,6 +8,7 @@ extern crate rocket_contrib;
 extern crate serde_derive;
 extern crate serde_json;
 
+use rocket_contrib::Template;
 use std::fs;
 
 mod test;
@@ -19,10 +20,13 @@ fn main() {
     // Create test dir if it does not exist
     fs::create_dir_all("tests").unwrap();
 
-    rocket::ignite().mount("/", routes![
-        upload::index,
-        view::index,
-        view::model,
-        view::test
-    ]).launch();
+    rocket::ignite()
+        .attach(Template::fairing())
+        .mount("/", routes![
+            upload::index,
+            view::index,
+            view::model,
+            view::test
+        ])
+        .launch();
 }
