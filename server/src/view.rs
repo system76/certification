@@ -179,10 +179,10 @@ fn test(model: String, test: String) -> io::Result<Template> {
     if let Some(ref mut results) = data.results {
         for result in results.iter() {
             match result.status.as_str() {
-                "failed" => failed += 1,
-                "passed" => passed += 1,
+                "fail" | "failed" => failed += 1,
+                "pass" | "passed" => passed += 1,
                 "not supported" => not_supported += 1,
-                "skipped" => skipped += 1,
+                "skip" | "skipped" => skipped += 1,
                 status => println!("Unknown status {}", status)
             }
             total += 1;
