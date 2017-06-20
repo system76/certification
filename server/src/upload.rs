@@ -25,7 +25,7 @@ impl FromData for Upload {
         }
 
         let content_type = req.content_type().unwrap();
-        if ! content_type.is_data_form() {
+        if ! content_type.is_form_data() {
             println!("WARN: Form data does not have multipart content type.");
             return Forward(data);
         }

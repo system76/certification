@@ -82,7 +82,7 @@ fn index() -> io::Result<Template> {
 }
 
 #[get("/<model>")]
-fn model(model: &str) -> io::Result<Template> {
+fn model(model: String) -> io::Result<Template> {
     #[derive(Serialize)]
     struct TestRow {
         test: String,
@@ -103,8 +103,8 @@ fn model(model: &str) -> io::Result<Template> {
     }
 
     let mut tests = Vec::new();
-    for test in util::list_tests(model)? {
-        let data = Test::from_str(&util::read_test(model, &test)?)?;
+    for test in util::list_tests(&model)? {
+        let data = Test::from_str(&util::read_test(&model, &test)?)?;
 
         let mut failed = 0;
         let mut not_supported = 0;
@@ -148,13 +148,13 @@ fn model(model: &str) -> io::Result<Template> {
     }
 
     Ok(Template::render("model", &Context {
-        model: model.to_string(),
+        model: model,
         tests: tests
     }))
 }
 
 #[get("/<model>/<test>")]
-fn test(model: &str, test: &str) -> io::Result<Template> {
+fn test(model: String, test: String) -> io::Result<Template> {
     #[derive(Serialize)]
     struct Context {
         model: String,
@@ -175,7 +175,7 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
     let mut passed = 0;
     let mut skipped = 0;
     let mut total = 0;
-    let mut data = Test::from_str(&util::read_test(model, test)?)?;
+    let mut data = Test::from_str(&util::read_test(&model, &test)?)?;
     if let Some(ref mut results) = data.results {
         for result in results.iter() {
             match result.status.as_str() {
@@ -205,8 +205,8 @@ fn test(model: &str, test: &str) -> io::Result<Template> {
     }
 
     Ok(Template::render("test", &Context {
-        model: model.to_string(),
-        test: test.to_string(),
+        model: model,
+        test: test,
         name: name,
         date: date,
         time: time,
