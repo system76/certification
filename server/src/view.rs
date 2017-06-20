@@ -40,10 +40,10 @@ fn index() -> io::Result<Template> {
             if let Some(results) = data.results {
                 for result in results {
                     match result.status.as_str() {
-                        "failed" => failed += 1,
+                        "fail" | "failed" => failed += 1,
                         "pass" | "passed" => passed += 1,
                         "not supported" => not_supported += 1,
-                        "skipped" => skipped += 1,
+                        "skip" | "skipped" => skipped += 1,
                         status => println!("Unknown status {}", status)
                     }
                     total += 1;
@@ -114,10 +114,10 @@ fn model(model: String) -> io::Result<Template> {
         if let Some(results) = data.results {
             for result in results {
                 match result.status.as_str() {
-                    "failed" => failed += 1,
-                    "passed" => passed += 1,
+                    "fail" | "failed" => failed += 1,
+                    "pass" | "passed" => passed += 1,
                     "not supported" => not_supported += 1,
-                    "skipped" => skipped += 1,
+                    "skip" | "skipped" => skipped += 1,
                     status => println!("Unknown status {}", status)
                 }
                 total += 1;
