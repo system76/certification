@@ -1,0 +1,10 @@
+unit: test plan
+id: laptop
+_name: System76 Laptop Manual Test Plan
+_description: Laptop manual jobs
+estimated_duration: 10m
+nested_part:
+    hotkey
+    manual
+    automated
+include:

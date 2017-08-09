@@ -1,0 +1,9 @@
+unit: test plan
+id: desktop
+_name: System76 Desktop Test Plan
+_description: Desktop jobs
+estimated_duration: 20m
+nested_part:
+    manual
+    automated
+include:
