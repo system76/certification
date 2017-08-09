@@ -51,13 +51,13 @@ forced = yes
 type = converged
 
 [exporter:html]
-unit = 2013.com.canonical.plainbox::html
+unit = com.canonical.plainbox::html
 
 [exporter:json]
-unit = 2013.com.canonical.plainbox::json
+unit = com.canonical.plainbox::json
 
 [exporter:tar]
-unit = 2013.com.canonical.plainbox::tar
+unit = com.canonical.plainbox::tar
 
 [transport:html]
 type = file
