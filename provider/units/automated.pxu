@@ -4,6 +4,7 @@ _name: System76 Automated Test Plan
 _description: Automated jobs
 estimated_duration: 10m
 nested_part:
+    device
     firmware
     com.canonical.certification::autotesting
 exclude:
