@@ -1,0 +1,31 @@
+unit: test plan
+id: device
+_name: System76 Device Test Plan
+_description: Device jobs
+estimated_duration: 30s
+include:
+    device/.*
+
+unit: category
+id: device_category
+_name: System76 Device Tests
+
+unit: job
+category_id: device_category
+id: device/lspci
+_summary: List of PCI devices
+plugin: shell
+estimated_duration: 30s
+command: lspci -vvnn
+_description:
+    Retrieve the list of PCI devices
+
+unit: job
+category_id: device_category
+id: device/lsusb
+_summary: List of USB devices
+plugin: shell
+estimated_duration: 30s
+command: lsusb -v
+_description:
+    Retrieve the list of USB devices
