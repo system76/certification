@@ -11,7 +11,8 @@ products = [
     'Kudu',
     'Lemur',
     'Oryx Pro',
-    'Serval WS'
+    'Serval WS',
+    'Leopard WS'
 ]
 
 fp = open('/sys/class/dmi/id/product_name')
