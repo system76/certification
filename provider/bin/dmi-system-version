@@ -7,17 +7,20 @@ import sys
 versions = [
     'bonw12',
     'galp2',
+    'galp3',
     'gaze12',
     'kudu4',
     'lemu6',
     'lemu7',
+    'lemu8',
     'oryp2',
     'oryp2-ess',
     'oryp3',
     'oryp3-ess',
     'oryp3-b',
+    'leow8',
     'serw10',
-    'leow8'
+    'wilp13'
 ]
 
 fp = open('/sys/class/dmi/id/product_version')
