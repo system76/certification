@@ -89,7 +89,7 @@ forced = yes
 EOF
 
 # Run checkbox-converged with the launcher
-checkbox-cli launcher launcher.conf || true
+sudo checkbox-cli launcher launcher.conf || true
 
 if [ -n "$2" ]
 then
