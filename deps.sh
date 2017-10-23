@@ -6,6 +6,11 @@ sudo apt update -y
 sudo apt install -y \
     checkbox-ng \
     plainbox-provider-checkbox \
+    fswebcam \
+    fwts \
+    iperf \
     net-tools \
-    snapd
+    obexftp \
+    snapd \
+    wmctrl
 sudo snap install core

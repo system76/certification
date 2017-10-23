@@ -28,10 +28,11 @@ cd provider
 python3 manage.py develop -f
 cd ..
 
-# Create report directory
-REPORT="tests/$PLAN/"
-mkdir -p "$REPORT"
-cd "$REPORT"
+# Create test directory
+TEST="$(date "+%F_%T")_$PLAN"
+rm -rf "tests/$TEST/"
+mkdir "tests/$TEST/"
+cd "tests/$TEST/"
 
 # Create launcher
 cat > launcher.conf <<EOF
@@ -94,7 +95,6 @@ if [ -n "$2" ]
 then
   SERVER="http://10.17.75.78:8000"
   MODEL="$2"
-  TEST="$(date "+%F_%T")_$PLAN"
   echo "Uploading report.json to $SERVER/$MODEL/$TEST"
   curl -F "model=$MODEL" -F "test=$TEST" -F "file=@report.json" "$SERVER/upload"
 fi
