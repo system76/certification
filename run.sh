@@ -48,7 +48,7 @@ forced = yes
 forced = yes
 
 [ui]
-type = converged
+type = interactive
 
 [exporter:html]
 unit = com.canonical.plainbox::html
@@ -88,7 +88,7 @@ forced = yes
 EOF
 
 # Run checkbox-converged with the launcher
-QT_AUTO_SCREEN_SCALE_FACTOR=1 qmlscene "$QML" --launcher=launcher.conf || true
+checkbox-cli launcher launcher.conf || true
 
 if [ -n "$2" ]
 then
