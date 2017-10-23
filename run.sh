@@ -31,7 +31,7 @@ cd ..
 # Create test directory
 TEST="$(date "+%F_%T")_$PLAN"
 rm -rf "tests/$TEST/"
-mkdir "tests/$TEST/"
+mkdir -p "tests/$TEST/"
 cd "tests/$TEST/"
 
 # Create launcher
