@@ -7,37 +7,3 @@ nested_part:
     device
     firmware
     com.canonical.certification::autotesting
-exclude:
-    com.canonical.certification::audio/alsa_record_playback_automated
-    com.canonical.certification::info/detect_dell_recovery
-    com.canonical.certification::dell_bto_xml_attachment
-    com.canonical.certification::dell_bto_xml_attachment_json
-    com.canonical.certification::info/detect_recovery
-    com.canonical.certification::recovery_info_attachment
-    com.canonical.certification::recovery_info_attachment_json
-    com.canonical.certification::mediacard/sd-preinserted
-    com.canonical.certification::memory/check
-    com.canonical.certification::miscellanea/submission-resources
-    com.canonical.certification::networking/http
-    com.canonical.certification::suspend/bluetooth_obex_browse_after_suspend_auto
-    com.canonical.certification::suspend/bluetooth_obex_browse_before_suspend
-    com.canonical.certification::suspend/bluetooth_obex_get_after_suspend_auto
-    com.canonical.certification::suspend/bluetooth_obex_get_before_suspend
-    com.canonical.certification::suspend/bluetooth_obex_send_after_suspend_auto
-    com.canonical.certification::suspend/bluetooth_obex_send_before_suspend
-    com.canonical.certification::suspend/record_playback_after_suspend_auto
-    com.canonical.certification::suspend/usb_storage_preinserted_after_suspend
-    com.canonical.certification::suspend/wireless_connection_after_suspend_open_ac_auto
-    com.canonical.certification::suspend/wireless_connection_after_suspend_open_bg_auto
-    com.canonical.certification::suspend/wireless_connection_after_suspend_open_n_auto
-    com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_ac_auto
-    com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_bg_auto
-    com.canonical.certification::suspend/wireless_connection_after_suspend_wpa_n_auto
-    com.canonical.certification::usb/storage-preinserted
-    com.canonical.certification::wireless/monitor_wireless_connection_udp
-    com.canonical.certification::wireless/wireless_connection_open_ac
-    com.canonical.certification::wireless/wireless_connection_open_bg
-    com.canonical.certification::wireless/wireless_connection_open_n
-    com.canonical.certification::wireless/wireless_connection_wpa_ac
-    com.canonical.certification::wireless/wireless_connection_wpa_bg
-    com.canonical.certification::wireless/wireless_connection_wpa_n
