@@ -7,9 +7,12 @@ nested_part:
     device
     firmware
     com.canonical.certification::audio-cert-automated
+    com.canonical.certification::bluetooth-cert-automated
     com.canonical.certification::camera-cert-automated
-    com.canonical.certification::cpu-cert-automated
+    #com.canonical.certification::cpu-cert-automated
     com.canonical.certification::disk-cert-automated
     com.canonical.certification::info-attachment-cert-full
     com.canonical.certification::networking-cert-automated
-    com.canonical.certification::wireless-cert-automated
+    #com.canonical.certification::wireless-cert-automated
+exclude:
+    com.canonical.certification::disk/storage_device_.*

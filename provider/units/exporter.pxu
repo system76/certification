@@ -1,0 +1,6 @@
+unit: exporter
+id: json_patched
+_summary: Generate JSON output
+entry_point: jinja2
+file_extension: json
+data: {"template": "checkbox.json.j2"}

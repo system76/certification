@@ -9,6 +9,7 @@ sudo apt install -y \
     fswebcam \
     fwts \
     iperf \
+    jsonlint \
     net-tools \
     obexftp \
     snapd \

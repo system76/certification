@@ -1,7 +1,6 @@
 # Run tests using checkbox
 set -e
 
-
 # Check if checkbox-converged QML file is available
 QML="$PWD/checkbox-converged/checkbox-converged.qml"
 if [ ! -f "$QML" ]
@@ -55,7 +54,7 @@ type = interactive
 unit = com.canonical.plainbox::html
 
 [exporter:json]
-unit = com.canonical.plainbox::json
+unit = 2017.com.system76::json_patched
 
 [exporter:tar]
 unit = com.canonical.plainbox::tar
@@ -70,7 +69,7 @@ path = report.json
 
 [transport:tar]
 type = file
-path = report.tar
+path = report.tar.xz
 
 [report:html]
 exporter = html
@@ -90,6 +89,8 @@ EOF
 
 # Run checkbox-converged with the launcher
 sudo checkbox-cli launcher launcher.conf || true
+
+jsonlint-php report.json
 
 if [ -n "$2" ]
 then
