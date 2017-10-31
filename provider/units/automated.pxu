@@ -16,3 +16,4 @@ nested_part:
     com.canonical.certification::wireless-cert-automated
 exclude:
     com.canonical.certification::disk/storage_device_.*
+    com.canonical.certification::installer_debug.gz
