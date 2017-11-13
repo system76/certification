@@ -1,0 +1,122 @@
+unit: test plan
+id: manual_after_suspend
+_name: System76 Manual Audio Test Plan
+_description: Manual audio jobs
+estimated_duration: 5m
+include:
+    manual_after_suspend/.*
+
+unit: category
+id: manual_after_suspend_category
+_name: second manual tests
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/speaker
+_summary: Test speaker audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test speaker output.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/headphone
+_summary: Test headphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in headphones and test headphone jack output. Ensure that the speakers are muted.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/line_out
+_summary: Test line out audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a line out device and test line out jack output. Ensure that the speakers are muted.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/internal_microphone
+_summary: Test internal microphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test internal microphone input.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/microphone
+_summary: Test microphone audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a microphone and test microphone jack input.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/line_in
+_summary: Test line in audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a line in device and test line in jack input.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/displayport_video
+_summary: Test DisplayPort monitor video
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a DisplayPort monitor and verify that it is usable.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/displayport_audio
+_summary: Test DisplayPort monitor audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test audio on a DisplayPort monitor
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/hdmi_video
+_summary: Test HDMI monitor video
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a HDMI monitor and verify that it is usable.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/hdmi_audio
+_summary: Test HDMI monitor audio
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Test audio on a HDMI monitor
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/vga_video
+_summary: Test VGA monitor video
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Plug in a VGA monitor and verify that it is usable.
+

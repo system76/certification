@@ -7,4 +7,6 @@ nested_part:
     hotkey
     manual
     automated
+    suspend
+    manual_after_suspend
 include:

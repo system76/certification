@@ -1,0 +1,21 @@
+unit: test plan
+id: suspend
+_name: System76 Suspend Test Plan
+_description: Suspend jobs
+estimated_duration: 30s
+include:
+    suspend/.*
+
+unit: category
+id: suspend_category
+_name: System76 Suspend Tests
+
+unit: job
+category_id: suspend_category
+id: suspend/auto
+_summary: Suspend test
+plugin: shell
+estimated_duration: 30s
+command: fwts s3 --s3-multiple 100 --s3-min-delay 15 --s3-max-delay 30
+description:
+    A suspend test is about to run. The machine will go into suspend 100 times.
