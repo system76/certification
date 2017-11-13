@@ -8,5 +8,6 @@ nested_part:
     manual
     automated
     suspend
+    hotkey_after_suspend
     manual_after_suspend
 include:
