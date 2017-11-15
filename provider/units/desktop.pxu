@@ -6,4 +6,6 @@ estimated_duration: 20m
 nested_part:
     manual
     automated
+    suspend
+    manual_after_suspend
 include:

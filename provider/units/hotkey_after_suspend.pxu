@@ -1,0 +1,102 @@
+unit: test plan
+id: hotkey_after_suspend
+_name: System76 Manual Hotkey Test Plan
+_description: Manual hotkey jobs
+estimated_duration: 5m
+include:
+    hotkey_after_suspend/.*
+
+unit: category
+id: hotkey_after_suspend_category
+_name: System76 Hotkey Tests
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/touchpad_toggle
+_summary: Test the touchpad toggle
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The touchpad should turn off. Pressing the key again should turn it back on.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/lcd_toggle
+_summary: LCD toggle hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The LCD screen should turn off. Pressing the key again should turn it back on.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/mute
+_summary: Mute hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The volume indicator should change, and a notification should pop up.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/volume
+_summary: Volume up and down hotkeys
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The volume indicator should change, and a notification should pop up.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/display_switch
+_summary: Display switch hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    TODO
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/brightness
+_summary: Brightness up and down hotkeys
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The screen brightness should change, and a notification should pop up.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/camera_toggle
+_summary: Camera toggle hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The camera should be disabled. Pressing the key again will enable it.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/airplane_mode
+_summary: Airplane mode hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    WiFi and bluetooth should be disabled. Pressing the key again will enable them.
+    The airplane mode light should also toggle on and off.
+
+unit: job
+category_id: hotkey_after_suspend_category
+id: hotkey_after_suspend/suspend
+_summary: Suspend hotkey
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    The system should go to sleep. Pressing the key again will wake the system up.
