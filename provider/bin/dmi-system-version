@@ -6,6 +6,7 @@ import sys
 # List of versions.
 versions = [
     'bonw12',
+    'bonw13',
     'galp2',
     'galp3',
     'gaze12',
@@ -20,8 +21,11 @@ versions = [
     'oryp3-b',
     'leow8',
     'leow9',
+    'leow9-w',
     'serw10',
-    'wilp13'
+    'serw11',
+    'wilp13',
+    'wilp14'
 ]
 
 fp = open('/sys/class/dmi/id/product_version')
