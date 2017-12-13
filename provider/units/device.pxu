@@ -29,3 +29,13 @@ estimated_duration: 30s
 command: lsusb -v
 _description:
     Retrieve the list of USB devices
+    
+unit: job
+category_id: device_category
+id: device/os-release
+_summary: List operating system details
+plugin: shell
+estimated_duration: 1s
+command: cat /etc/os-release
+_description:
+    Retrieve operating system details
