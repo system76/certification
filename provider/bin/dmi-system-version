@@ -14,20 +14,20 @@ versions = [
     'lemu6',
     'lemu7',
     'lemu8',
+    'leow8',
+    'leow9',
+    'leow9-w',
+    'meer2',
+    'meer3',
     'oryp2',
     'oryp2-ess',
     'oryp3',
     'oryp3-ess',
     'oryp3-b',
-    'leow8',
-    'leow9',
-    'leow9-w',
     'serw10',
     'serw11',
     'wilp13',
     'wilp14',
-    'meer2',
-    'meer3'
 ]
 
 fp = open('/sys/class/dmi/id/product_version')
