@@ -26,6 +26,7 @@ versions = [
     'oryp3-b',
     'serw10',
     'serw11',
+    'wilp12',
     'wilp13',
     'wilp14',
 ]
