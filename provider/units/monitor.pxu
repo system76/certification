@@ -53,9 +53,9 @@ _description:
 unit: job
 category_id: monitor_category
 id: monitor/vga_video
-_summary: Test VGA monitor video
+_summary: Test DVI/VGA monitor video
 plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
 _description:
-    Plug in a VGA monitor and verify that it is usable.
+    Plug in DVI and/or VGA monitor and verify that it is usable.

@@ -11,3 +11,18 @@ nested_part:
     hotkey_after_suspend
     manual_after_suspend
 include:
+    laptop/.*
+
+unit: category
+id: laptop_category
+_name: System76 LAptop Specific Tests
+
+unit: job
+category_id: hotkey_category
+id: laptop/lidclose
+_summary: Test lidclose functionality
+plugin: manual
+flags: explicit-fail
+estimated_duration: 30s
+_description:
+    Close the lid. The system should suspend. Resuming should work as expected.

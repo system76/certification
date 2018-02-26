@@ -13,5 +13,12 @@ sudo apt install -y \
     net-tools \
     obexftp \
     snapd \
-    wmctrl
+    wmctrl \
+    gnome-sound-recorder \
+    audacity \
+    cheese
+# Added both gnome-sound-recorder and audacity because of bug found on leow9
+# while using Audacity
+# cheese only needed on laptops
+    
 sudo snap install core
