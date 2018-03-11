@@ -1,23 +1,25 @@
 unit: test plan
-id: laptop
+id: laptop_full
 _name: System76 Laptop Test Plan
 _description: Laptop jobs
 estimated_duration: 10m
 nested_part:
-    manual
     hotkey
+    manual
+    automated
+    suspend
     hotkey_after_suspend
     manual_after_suspend
 include:
-    laptop/.*
+    laptop_full/.*
 
 unit: category
-id: laptop_category
+id: laptop_full_category
 _name: System76 Laptop Specific Tests
 
 unit: job
-category_id: laptop_category
-id: laptop/lidclose
+category_id: laptop_full_category
+id: laptop_full/lidclose
 _summary: Test lidclose functionality
 plugin: manual
 flags: explicit-fail
@@ -26,8 +28,8 @@ _description:
     Close the lid. The system should suspend. Resuming should work as expected.
 
 unit: job
-category_id: laptop_category
-id: laptop/wifi
+category_id: laptop_full_category
+id: laptop_full/wifi
 _summary: Test wifi connectivity
 plugin: manual
 flags: explicit-fail
@@ -36,8 +38,8 @@ _description:
     Connect to a wifi network. Confirm connectivity.
 
 unit: job
-category_id: laptop_category
-id: laptop/bluetooth
+category_id: laptop_full_category
+id: laptop_full/bluetooth
 _summary: Test bluetooth connectivity
 plugin: manual
 flags: explicit-fail

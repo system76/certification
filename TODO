@@ -33,14 +33,18 @@ display switch hotkey description should be completed
 
 MISC.
 TODO:
-Test bluetooth (just speaker or also keyboard/mouse)
-Test wifi connects (and reconnects after system resume)
+TEST:
 Test lock screen. Check mouse goes away.
+Test bluetooth (just speaker )
+Test wifi connects (and reconnects after system resume)
+DONE:
 
 laptop.pxu:
 TODO:
-DONE, needs testing:
+TEST:
 test lid switch. System should suspend when lid is closed
 system should not suspend when monitor is attached
+DONE:
 
-
+QUESTIONS:
+does `include:` take categories or ids?

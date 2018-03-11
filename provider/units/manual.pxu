@@ -7,3 +7,19 @@ nested_part:
     audio
     monitor
 include:
+    manual/.*
+
+unit: category
+id: manual_category
+_name: System76 Manual Tests
+
+unit: job
+category_id: manual_category
+id: manual/lockscreen
+_summary: Test lockscreen
+plugin: manual
+flags: explicit-fail
+estimated_duration: 15s
+_description:
+    Lock the machine. Log back in. Confirm all expected functionality.
+
