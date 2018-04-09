@@ -1,6 +1,6 @@
 # System76 Certification
 
-A collection of automated and manual processes to ensure the delivery of a quality Ubuntu machine.
+A collection of automated and manual processes to ensure the delivery of a quality System76 machine.
 
 <div style="page-break-after: always;"></div>
 
@@ -43,6 +43,8 @@ We should have a process of, given a new barebones machine, identifying present 
 ### Standardized Tests
 
 Each class of hardware should have a set of automated and manual tests and benchmarks that can be run in a scripted form. Preference would be to segregate manual and automated tests in order to allow quick runs of either.
+
+Full set of tests could include plainbox/checkbox tests (automated tests as well as manual tests), phoronix benchmarking and possibly even blender tests.
 
 ### Test Suggestion
 

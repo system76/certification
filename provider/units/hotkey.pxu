@@ -42,6 +42,16 @@ _description:
 
 unit: job
 category_id: hotkey_category
+id: hotkey/keyboardbacklight
+_summary: Backlight brightness and color toggle.
+plugin: manual
+flags: explicit-fail
+estimated_duration: 45s
+_description:
+    Toggle the keyboard backlight brightness. If different colors are available, toggle through them as well. Default color should be white.
+
+unit: job
+category_id: hotkey_category
 id: hotkey/volume
 _summary: Volume up and down hotkeys
 plugin: manual
@@ -58,7 +68,7 @@ plugin: manual
 flags: explicit-fail
 estimated_duration: 30s
 _description:
-    TODO
+    With an external display plugged in, should alternate through different display modes (mirror, extended, etc).
 
 unit: job
 category_id: hotkey_category

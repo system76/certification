@@ -1,0 +1,50 @@
+https://checkbox.readthedocs.io/en/latest/
+
+deps.sh:
+TODO:
+only add dependencies when needed (cheese not needed on desktops)
+DONE:
+add cheese
+
+firmware.pxu:
+TODO:
+add check for Intel M.E.
+
+audio.pxu:
+TODO:
+`Test speaker output` and `Test internal microphone input` only need to run on laptops
+Add S/PDIF check
+
+monitor.pxu:
+TODO:
+longterm- autodetect what display ports exist, only ask for those tests
+DONE:
+VGA test stands for DVI as well
+
+hotkey.pxu:
+NOTE:
+`_description` tag is most visible when testing, most descriptive/details
+ should be listed there
+DONE:
+Ellaborate that for laptops with color changing keyboard backlights, those
+hotkeys should be tested as well. By default keyboard backlight should 
+be white
+display switch hotkey description should be completed
+
+MISC.
+TODO:
+TEST:
+Test lock screen. Check mouse goes away.
+Test bluetooth (just speaker )
+Test wifi connects (and reconnects after system resume)
+DONE:
+
+laptop.pxu:
+TODO:
+TEST:
+test lid switch. System should suspend when lid is closed
+system should not suspend when monitor is attached
+DONE:
+
+QUESTIONS:
+does `include:` take categories or ids?
