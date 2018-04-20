@@ -33,6 +33,7 @@ display switch hotkey description should be completed
 
 MISC.
 TODO:
+Test all ports (USB, ethernet, etc)
 TEST:
 Test lock screen. Check mouse goes away.
 Test bluetooth (just speaker )
@@ -45,6 +46,10 @@ TEST:
 test lid switch. System should suspend when lid is closed
 system should not suspend when monitor is attached
 DONE:
+
+desktop.pxu:
+TODO:
+Add tests for configuring and testing drive possibilities (including RAID)
 
 QUESTIONS:
 does `include:` take categories or ids?
