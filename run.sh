@@ -94,7 +94,7 @@ jsonlint-php report.json
 
 if [ -n "$2" ]
 then
-  SERVER="http://10.17.75.78:8000"
+  SERVER="http://209.212.58.90:8000"
   MODEL="$2"
   echo "Uploading report.json to $SERVER/$MODEL/$TEST"
   curl -F "model=$MODEL" -F "test=$TEST" -F "file=@report.json" "$SERVER/upload"
