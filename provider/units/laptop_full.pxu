@@ -10,39 +10,4 @@ nested_part:
     suspend
     hotkey_after_suspend
     manual_after_suspend
-include:
-    laptop_full/.*
 
-unit: category
-id: laptop_full_category
-_name: System76 Laptop Specific Tests
-
-unit: job
-category_id: laptop_full_category
-id: laptop_full/lidclose
-_summary: Test lidclose functionality
-plugin: manual
-flags: explicit-fail
-estimated_duration: 45s
-_description:
-    Close the lid. The system should suspend. Resuming should work as expected.
-
-unit: job
-category_id: laptop_full_category
-id: laptop_full/wifi
-_summary: Test wifi connectivity
-plugin: manual
-flags: explicit-fail
-estimated_duration: 45s
-_description:
-    Connect to a wifi network. Confirm connectivity.
-
-unit: job
-category_id: laptop_full_category
-id: laptop_full/bluetooth
-_summary: Test bluetooth connectivity
-plugin: manual
-flags: explicit-fail
-estimated_duration: 45s
-_description:
-    Connect bluetooth speaker. Confirm connectivity.

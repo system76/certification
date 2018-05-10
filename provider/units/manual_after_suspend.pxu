@@ -130,3 +130,33 @@ estimated_duration: 15s
 _description:
     Lock the machine. Log back in. Confirm all expected functionality.
 
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/lidclose
+_summary: Test lidclose functionality
+plugin: manual
+flags: explicit-fail
+estimated_duration: 45s
+_description:
+    Close the lid. The system should suspend. Resuming should work as expected.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/wifi
+_summary: Test wifi connectivity
+plugin: manual
+flags: explicit-fail
+estimated_duration: 45s
+_description:
+    Connect to a wifi network. Confirm connectivity.
+
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/bluetooth
+_summary: Test bluetooth connectivity
+plugin: manual
+flags: explicit-fail
+estimated_duration: 45s
+_description:
+    Connect bluetooth speaker. Confirm connectivity.
+
