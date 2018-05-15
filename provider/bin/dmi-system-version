@@ -26,9 +26,10 @@ versions = [
     'oryp3-b',
     'serw10',
     'serw11',
+    'silw3',
     'wilp12',
     'wilp13',
-    'wilp14',
+    'wilp14'
 ]
 
 fp = open('/sys/class/dmi/id/product_version')
