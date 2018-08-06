@@ -130,3 +130,12 @@ estimated_duration: 15s
 _description:
     Lock the machine. Log back in. Confirm all expected functionality.
 
+unit: job
+category_id: manual_after_suspend_category
+id: manual_after_suspend/ports
+_summary: Test all available ports
+plugin: manual
+flags: explicit-fail
+estimated_duration: 45s
+_description:
+    Plug in a device to all available dataports(USB, SD card, ethernet
