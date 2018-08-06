@@ -138,4 +138,4 @@ plugin: manual
 flags: explicit-fail
 estimated_duration: 45s
 _description:
-    Plug in a device to all available dataports(USB, SD card, ethernet
+    Plug in a device to all available dataports(USB, SD card, ethernet)
