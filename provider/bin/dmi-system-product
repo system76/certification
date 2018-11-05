@@ -15,6 +15,9 @@ products = [
     'Oryx Pro',
     'Serval WS',
     'Silverback WS',
+    'Thelio',
+    'Thelio Major',
+    'Thelio Massive',
     'Wild Dog Pro'
 ]
 

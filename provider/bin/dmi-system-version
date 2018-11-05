@@ -31,6 +31,11 @@ versions = [
     'serw10',
     'serw11',
     'silw3',
+    'thelio-b1',
+    'thelio-r1',
+    'thelio-major-b1',
+    'thelio-major-r1',
+    'thelio-massive-b1',
     'wilp12',
     'wilp13',
     'wilp14'
