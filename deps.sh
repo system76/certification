@@ -4,7 +4,10 @@ FIND='deb http:\/\/ppa.launchpad.net\/hardware-certification\/public\/ubuntu cos
 REPLACE='deb http:\/\/ppa.launchpad.net\/hardware-certification\/public\/ubuntu bionic main'
 
 sudo add-apt-repository -y ppa:hardware-certification/public
-sudo sed -i -e 's/'"$FIND"'/'"$REPLACE"'/g' /etc/apt/sources.list.d/hardware-certification-ubuntu-public-cosmic.list
+if  [ -f /etc/apt/sources.list.d/hardware-certification-ubuntu-public-cosmic.list ]
+then
+    sudo sed -i -e 's/'"$FIND"'/'"$REPLACE"'/g' /etc/apt/sources.list.d/hardware-certification-ubuntu-public-cosmic.list
+fi
 
 sudo apt update -y
 sudo apt install -y \
