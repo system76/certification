@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of versions.
+versions = [
+    'bonw12',
+    'bonw13',
+    'galp2',
+    'galp3',
+    'gaze12',
+    'gaze13',
+    'kudu4',
+    'kudu5',
+    'lemu6',
+    'lemu7',
+    'lemu8',
+    'leow8',
+    'leow9',
+    'leow9-w',
+    'meer2',
+    'meer3',
+    'oryp2',
+    'oryp2-ess',
+    'oryp3',
+    'oryp3-ess',
+    'oryp3-b',
+    'oryp4',
+    'oryp4-b',
+    'serw10',
+    'serw11',
+    'silw3',
+    'thelio-b1',
+    'thelio-r1',
+    'thelio-major-b1',
+    'thelio-major-r1',
+    'thelio-massive-b1',
+    'wilp12',
+    'wilp13',
+    'wilp14'
+]
+
+fp = open('/sys/class/dmi/id/board_version')
+version = fp.read().strip()
+fp.close()
+
+if version in versions:
+    print(version)
+else:
+    print('Unknown: %s' % (version))
+    sys.exit(1)
