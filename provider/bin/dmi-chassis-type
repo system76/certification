@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of versions.
+versions = [
+    '3',
+    '10'
+    
+]
+
+fp = open('/sys/class/dmi/id/chassis_type')
+version = fp.read().strip()
+fp.close()
+
+if version in versions:
+    print(version)
+else:
+    print('Unknown: %s' % (version))
+    sys.exit(1)
