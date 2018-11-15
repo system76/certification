@@ -91,3 +91,63 @@ estimated_duration: 30s
 command: dmi-system-version
 _description:
     Retrieve and test the system version
+
+unit: job
+category_id: firmware_category
+id: firmware/board_name
+_summary: Firmware board name
+plugin: shell
+estimated_duration: 30s
+command: dmi-board-name
+_description:
+    Retrieve and test the board name
+
+unit: job
+category_id: firmware_category
+id: firmware/board_vendor
+_summary: Firmware board vendor
+plugin: shell
+estimated_duration: 30s
+command: dmi-board-vendor
+_description:
+    Retrieve and test the board vendor
+
+unit: job
+category_id: firmware_category
+id: firmware/board_version
+_summary: Firmware board version
+plugin: shell
+estimated_duration: 30s
+command: dmi-board-version
+_description:
+    Retrieve and test the board version
+
+unit: job
+category_id: firmware_category
+id: firmware/chassis_vendor
+_summary: Firmware chassis vendor
+plugin: shell
+estimated_duration: 30s
+command: dmi-chassis-vendor
+_description:
+    Retrieve and test the chassis vendor
+
+unit: job
+category_id: firmware_category
+id: firmware/chassis_version
+_summary: Firmware chassis version
+plugin: shell
+estimated_duration: 30s
+command: dmi-chassis-version
+_description:
+    Retrieve and test the chassis version
+
+unit: job
+category_id: firmware_category
+id: firmware/chassis_type
+_summary: Firmware chassis type
+plugin: shell
+estimated_duration: 30s
+command: dmi-chassis-type
+_description:
+    Retrieve and test the chassis type

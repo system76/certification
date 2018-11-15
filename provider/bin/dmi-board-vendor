@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of manufacturers.
+manufacturers = [
+    'System76',
+    'System76, Inc.'
+]
+
+fp = open('/sys/class/dmi/id/board_vendor')
+manufacturer = fp.read().strip()
+fp.close()
+
+if manufacturer in manufacturers:
+    print(manufacturer)
+else:
+    print('Unknown: %s' % (manufacturer))
+    sys.exit(1)

@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+
+# List of products.
+products = [
+    'Bonobo WS',
+    'Galago Pro',
+    'Gazelle',
+    'Kudu',
+    'Lemur',
+    'Leopard WS',
+    'Meerkat',
+    'Oryx Pro',
+    'Serval WS',
+    'Silverback WS',
+    'Thelio',
+    'Thelio Major',
+    'Thelio Massive',
+    'Wild Dog Pro'
+]
+
+fp = open('/sys/class/dmi/id/board_name')
+product = fp.read().strip()
+fp.close()
+
+if product in products:
+    print(product)
+else:
+    print('Unknown: %s' % (product))
+    sys.exit(1)
