@@ -9,6 +9,8 @@ versions = [
     'bonw13',
     'galp2',
     'galp3',
+    'galp3-b',
+    'galp3-c',
     'gaze12',
     'gaze13',
     'kudu4',
