@@ -14,6 +14,7 @@ versions = [
     'galp3-c',
     'gaze12',
     'gaze13',
+    'gaze14',
     'kudu4',
     'kudu5',
     'lemu6',
