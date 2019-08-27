@@ -5,13 +5,16 @@ import sys
 
 # List of versions.
 versions = [
+    'addw1',
     'bonw12',
     'bonw13',
     'darp5',
+    'darp6',
     'galp2',
     'galp3',
     'galp3-b',
     'galp3-c',
+    'galp4',
     'gaze12',
     'gaze13',
     'gaze14',
