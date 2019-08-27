@@ -5,6 +5,7 @@ import sys
 
 # List of products.
 products = [
+    'Adder WS',
     'Bonobo WS',
     'Darter Pro',
     'Galago Pro',
