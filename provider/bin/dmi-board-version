@@ -46,6 +46,7 @@ versions = [
     'thelio-major-b1.1',
     'thelio-major-b2',
     'thelio-major-r1',
+    'thelio-major-r2',
     'thelio-massive-b1',
     'wilp12',
     'wilp13',
