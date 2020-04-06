@@ -1,8 +1,8 @@
 ## Test Platform
 
-| OS Version    | BIOS Version | EC Version | Before or after suspend |
-| ------------- | ------------ | ---------- | ----------------------- |
-| Pop!_OS 19.10 | XYZ          | 123        | Before                  |
+| OS Version    | BIOS Version       | EC Version | Before or after suspend |
+| ------------- | ------------------ | ---------- | ----------------------- |
+| Pop!_OS 19.10 | 2020-04-06_e7c4683 | 123        | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -12,28 +12,26 @@ x = pass | blank = fail | na = remove from list
 Note: display toggle hotkey is in the displays section below.
 
 - [x] Touchpad Lock
-- [ ] Turn off display
-- [ ] Mute sound
-- [ ] Volume down
-- [ ] Volume up
-- [ ] Brightness Down
-- [ ] Brightnes Up
-- [ ] Camera on/off
-- [ ] Airplane Mode
+- [x] Turn off display
+- [x] Mute sound
+- [x] Volume down
+- [x] Volume up
+- [x] Brightness Down
+- [x] Brightnes Up
+- [x] Camera on/off
+- [x] Airplane Mode
 - [ ] Suspend
 - [ ] Play/Pause
-- [ ] Keyboard backlight on/off
-- [ ] Keyboard backlight brightness up
-- [ ] Keyboard backlight brightness down
-- [ ] Keyboard backlight toggle colors
+- [x] Keyboard backlight on/off and brightness
 
 ### Hot key notes and issues
 
-No notes
+- Brightness up/down is a little choppy. Not a show-stopper but would be a nice improvement to smooth out the transitions.
+- Space bar when playing a youtube video does not pause the video
 
 ## Ports (Non Monitor Related)
 
-- [x] Left USB Type A
+- [ ] Left USB Type A
 - [ ] Right USB Type A
 - [ ] Left USB Type C
 - [ ] Right USB Type C
@@ -50,7 +48,7 @@ No notes
 
 ## Displays
 
-- [x] HDMI port
+- [ ] HDMI port
 - [ ] HDMI port audio
 - [ ] Display config toggle (span/cloned/internal/external)
 - [ ] Mini display port
@@ -83,7 +81,7 @@ No notes
 
 ## Suspend
 
-- [x] Close lid - system suspends
+- [ ] Close lid - system suspends
 - [ ] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 
