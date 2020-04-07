@@ -78,8 +78,8 @@ No notes
 ## Network and bluetooth
 
 - [x] Wifi connects with expected performance
-- [ ] Bluetooth speaker
-- [ ] Bluetooth mic
+- [x] Bluetooth speaker
+- [x] Bluetooth mic
 - [x] Lock machine
 
 ### Network and bluetooth
@@ -88,9 +88,7 @@ No notes
 
 ## Suspend
 
-- [ ] Close lid - system suspends
-- [ ] 150 suspend successful
-- [ ] System prompts and eventually suspends on depleted battery
+- [x] Close lid - system suspends
 
 ### Suspend notes and issues
 
