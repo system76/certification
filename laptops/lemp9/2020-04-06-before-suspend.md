@@ -1,7 +1,5 @@
 ## Test Platform
 
-EC version
-
 | Test complete | OS Version    | BIOS Version       | EC Version         | Before or after suspend |
 | --------------| ------------- | ------------------ | ------------------ | ----------------------- |
 | INCOMPLETE    | Pop!_OS 19.10 | 2020-04-06_e7c4683 | 2020-04-06_2d17acd | Before                  |
