@@ -58,24 +58,20 @@ No notes
 
 ## Displays
 
-- [ ] HDMI port
-- [ ] HDMI port audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Mini display port
-- [ ] Mini display port audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Type C DP
-- [ ] Type C DP audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Dual external display + internal
-- [ ] Dual external display + internal
+- [x] HDMI port
+- [x] HDMI port audio
+- [x] Display config toggle (span/cloned/internal/external)
+- [x] Type C DP
+- [x] Type C DP audio
+- [x] Display config toggle (span/cloned/internal/external)
+- [x] Dual external display + internal
 - [ ] Triple external display via DP daisy chain + internal
 - [ ] Close internal display. Monitors adjust correctly.
 - [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
 
-No notes
+- Display toggle works. However, the pop-up display does not give the opportunity to toggle between options and instead switches to the next in the list. An improvement would be to not change display setup until the function key is released.
 
 ## Network and bluetooth
 
