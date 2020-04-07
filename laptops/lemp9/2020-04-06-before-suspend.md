@@ -1,5 +1,7 @@
 ## Test Platform
 
+EC version
+
 | OS Version    | BIOS Version       | EC Version | Before or after suspend |
 | ------------- | ------------------ | ---------- | ----------------------- |
 | Pop!_OS 19.10 | 2020-04-06_e7c4683 | 123        | Before                  |
@@ -28,6 +30,19 @@ Note: display toggle hotkey is in the displays section below.
 
 - Brightness up/down is a little choppy. Not a show-stopper but would be a nice improvement to smooth out the transitions.
 - Space bar when playing a youtube video does not pause the video
+
+### Touchpad
+
+- [x] Touchpad two finger scrolling 
+- [x] Touchpad edge scrolling
+- [x] Tap to click
+- [x] Touchpad speed adjustable
+- [x] Left click
+- [ ] Right click
+
+### Touchpad notes and issues
+
+- Can't right click on the touchpad
 
 ## Ports (Non Monitor Related)
 
