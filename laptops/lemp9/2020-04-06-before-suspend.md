@@ -20,7 +20,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Brightnes Up
 - [x] Camera on/off
 - [x] Airplane Mode
-- [ ] Suspend
+- [x] Suspend
 - [x] Play/Pause
 - [x] Keyboard backlight on/off and brightness
 
@@ -87,8 +87,8 @@ No notes
 
 ## Suspend
 
-- [ ] Close lid - system suspends
-- [ ] 150 suspend successful
+- [x] Close lid - system suspends
+- [x] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
