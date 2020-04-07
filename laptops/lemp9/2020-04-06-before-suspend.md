@@ -75,8 +75,8 @@ No notes
 ## Network and bluetooth
 
 - [x] Wifi connects with expected performance
-- [ ] Bluetooth speaker
-- [ ] Bluetooth mic
+- [x] Bluetooth speaker
+- [x] Bluetooth mic
 - [x] Lock machine
 
 ### Network and bluetooth
