@@ -64,6 +64,7 @@ No notes
 - [x] Type C DP audio
 - [x] Display config toggle (span/cloned/internal/external)
 - [x] Dual external display + internal
+- [x] Daisy chain display port + internal
 - [ ] Triple external display via DP daisy chain + internal
 - [x] Close internal display. Monitors adjust correctly.
 - [x] Reboot w/ lid closed. Decryption dialog shows on external display.
@@ -71,6 +72,7 @@ No notes
 ### Displays notes and issues
 
 - Display toggle works. However, the pop-up display does not give the opportunity to toggle between options and instead switches to the next in the list. An improvement would be to not change display setup until the function key is released.
+- Triple external + internal does not work. It may not be supported by the chipset or GPU.
 
 ## Network and bluetooth
 
