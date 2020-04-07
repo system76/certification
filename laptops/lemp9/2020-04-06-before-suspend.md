@@ -2,9 +2,9 @@
 
 EC version
 
-| OS Version    | BIOS Version       | EC Version | Before or after suspend |
-| ------------- | ------------------ | ---------- | ----------------------- |
-| Pop!_OS 19.10 | 2020-04-06_e7c4683 | 123        | Before                  |
+| Test complete | OS Version    | BIOS Version       | EC Version         | Before or after suspend |
+| --------------| ------------- | ------------------ | ------------------ | ----------------------- |
+| INCOMPLETE    | Pop!_OS 19.10 | 2020-04-06_e7c4683 | 2020-04-06_2d17acd | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -22,7 +22,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Brightnes Up
 - [x] Camera on/off
 - [x] Airplane Mode
-- [ ] Suspend (DO NOT TEST IN 1ST ROUND)
+- [ ] Suspend
 - [ ] Play/Pause
 - [x] Keyboard backlight on/off and brightness
 
@@ -46,15 +46,11 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Ports (Non Monitor Related)
 
-- [ ] Left USB Type A
-- [ ] Right USB Type A
+- [x] Left USB Type A
+- [x] Right USB Type A
 - [ ] Left USB Type C
-- [ ] Right USB Type C
 - [ ] SD card slot
-- [ ] Headphone jack
-- [ ] Microphone jack
 - [ ] Combo jack
-- [ ] spdif jack
 - [ ] Plugging in headphone or combo jack mutes internal speakers
 
 ### Ports notes and issues
