@@ -21,7 +21,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Camera on/off
 - [x] Airplane Mode
 - [ ] Suspend
-- [ ] Play/Pause
+- [x] Play/Pause
 - [x] Keyboard backlight on/off and brightness
 
 ### Hot key notes and issues
@@ -48,7 +48,8 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Right USB Type A
 - [ ] Left USB Type C
 - [ ] SD card slot
-- [ ] Combo jack
+- [x] Combo jack headphones
+- [ ] Combo jack mic
 - [ ] Plugging in headphone or combo jack mutes internal speakers
 
 ### Ports notes and issues
