@@ -68,7 +68,6 @@ No notes
 - [x] Daisy chain display port + internal
 - [ ] Triple external display via DP daisy chain + internal
 - [x] Close internal display. Monitors adjust correctly.
-- [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
 
