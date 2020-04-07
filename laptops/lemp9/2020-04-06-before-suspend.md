@@ -46,7 +46,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Left USB Type A
 - [x] Right USB Type A
 - [ ] Left USB Type C (Don't have USB C data device)
-- [ ] SD card slot
+- [x] SD card slot
 - [x] Combo jack headphones
 - [x] Combo jack mic
 - [x] Plugging in headphone or combo jack mutes internal speakers
