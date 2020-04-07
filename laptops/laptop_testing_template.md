@@ -53,7 +53,9 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] SD card slot
 - [ ] Headphone jack
 - [ ] Microphone jack
-- [ ] Combo jack
+- [ ] Combo jack headphones
+- [ ] Combo jack mic
+- [ ] Internal mic
 - [ ] spdif jack
 - [ ] Plugging in headphone or combo jack mutes internal speakers
 
