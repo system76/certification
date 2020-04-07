@@ -36,21 +36,21 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Tap to click
 - [x] Touchpad speed adjustable
 - [x] Left click
-- [ ] Right click
+- [x] Right click (Two finger click)
 
 ### Touchpad notes and issues
 
-- Can't right click on the touchpad
+- No notes
 
 ## Ports (Non Monitor Related)
 
 - [x] Left USB Type A
 - [x] Right USB Type A
-- [ ] Left USB Type C
+- [ ] Left USB Type C (Don't have USB C data device)
 - [ ] SD card slot
 - [x] Combo jack headphones
-- [ ] Combo jack mic
-- [ ] Plugging in headphone or combo jack mutes internal speakers
+- [x] Combo jack mic
+- [x] Plugging in headphone or combo jack mutes internal speakers
 
 ### Ports notes and issues
 
@@ -79,11 +79,10 @@ No notes
 
 ## Network and bluetooth
 
-- [ ] Wifi connects with expected performance
-- [ ] Ethernet connects with expected performance
+- [x] Wifi connects with expected performance
 - [ ] Bluetooth speaker
 - [ ] Bluetooth mic
-- [ ] Lock machine
+- [x] Lock machine
 
 ### Network and bluetooth
 
