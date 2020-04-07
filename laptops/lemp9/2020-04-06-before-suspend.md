@@ -20,7 +20,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Brightnes Up
 - [x] Camera on/off
 - [x] Airplane Mode
-- [ ] Suspend
+- [ ] Suspend (DO NOT TEST IN 1ST ROUND)
 - [ ] Play/Pause
 - [x] Keyboard backlight on/off and brightness
 
