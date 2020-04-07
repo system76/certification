@@ -58,16 +58,16 @@ No notes
 
 ## Displays
 
-- [ ] HDMI port
-- [ ] HDMI port audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Type C DP
-- [ ] Type C DP audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Dual external display + internal
-- [ ] Daisy chain display port + internal
+- [x] HDMI port
+- [x] HDMI port audio
+- [x] Display config toggle (span/cloned/internal/external)
+- [x] Type C DP
+- [x] Type C DP audio
+- [x] Display config toggle (span/cloned/internal/external)
+- [x] Dual external display + internal
+- [x] Daisy chain display port + internal
 - [ ] Triple external display via DP daisy chain + internal
-- [ ] Close internal display. Monitors adjust correctly.
+- [x] Close internal display. Monitors adjust correctly.
 - [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
