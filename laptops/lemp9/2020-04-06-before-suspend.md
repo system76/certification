@@ -27,7 +27,6 @@ Note: display toggle hotkey is in the displays section below.
 ### Hot key notes and issues
 
 - Brightness up/down is a little choppy. Not a show-stopper but would be a nice improvement to smooth out the transitions.
-- Space bar when playing a youtube video does not pause the video
 
 ### Touchpad
 
@@ -67,7 +66,7 @@ No notes
 - [x] Dual external display + internal
 - [ ] Triple external display via DP daisy chain + internal
 - [x] Close internal display. Monitors adjust correctly.
-- [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
+- [x] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
 
