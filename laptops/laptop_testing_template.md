@@ -31,7 +31,7 @@ Note: display toggle hotkey is in the displays section below.
 
 - No notes
 
-### Touchpad
+## Touchpad
 
 - [x] Touchpad two finger scrolling 
 - [ ] Touchpad edge scrolling
