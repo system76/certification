@@ -1,8 +1,8 @@
 ## Test Platform
 
-| OS Version    | BIOS Version | EC Version | Before or after suspend |
-| ------------- | ------------ | ---------- | ----------------------- |
-| Pop!_OS 19.10 | XYZ          | 123        | Before                  |
+| Test complete | OS Version    | BIOS Version | EC Version | Before or after suspend |
+| ------------- | ------------- | ------------ | ---------- | ----------------------- |
+| INCOMPLETE    | Pop!_OS 19.10 | XYZ          | 123        | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
