@@ -29,9 +29,22 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Hot key notes and issues
 
-No notes
+- No notes
 
-## Ports (Non Monitor Related)
+### Touchpad
+
+- [x] Touchpad two finger scrolling 
+- [ ] Touchpad edge scrolling
+- [ ] Tap to click
+- [ ] Touchpad speed adjustable
+- [ ] Left click
+- [ ] Right click
+
+### Touchpad notes and issues
+
+- No notes
+
+## Ports (Non Display Related)
 
 - [x] Left USB Type A
 - [ ] Right USB Type A
@@ -46,7 +59,7 @@ No notes
 
 ### Ports notes and issues
 
-No notes
+- No notes
 
 ## Displays
 
@@ -67,7 +80,7 @@ No notes
 
 ### Displays notes and issues
 
-No notes
+- No notes
 
 ## Network and bluetooth
 
@@ -79,7 +92,7 @@ No notes
 
 ### Network and bluetooth
 
-No notes
+- No notes
 
 ## Suspend
 
@@ -89,4 +102,4 @@ No notes
 
 ### Suspend notes and issues
 
-No notes
+- No notes
