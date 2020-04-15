@@ -2,7 +2,7 @@
 
 | Test complete | OS Version    | BIOS Version | Before or after suspend |
 | ------------- | ------------- | ------------ | ----------------------- |
-| INCOMPLETE    | Pop!_OS 19.10 | XYZ          | Before                  |
+| INCOMPLETE    |               |              |                         |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
