@@ -57,8 +57,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Ports notes and issues
 
-- When trying to boot from external device:
-  - M.2 SSD enclosure does not show up as bootable when plugged into the right USB 3 type A port.
+- No notes
 
 ## Displays
 
@@ -101,6 +100,4 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Suspend notes and issues
 
-- On second system suspend, system fails to suspend
-- Could only test after suspend functionality after one suspend
-- UPDATE: this was fixed by https://github.com/system76/firmware/pull/210 (ME downgrade). Now full suspend tests can commence.
+- No notes
