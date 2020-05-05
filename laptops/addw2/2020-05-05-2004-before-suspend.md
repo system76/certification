@@ -61,19 +61,19 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Displays
 
-- [ ] HDMI port
+- [X] HDMI port
 - [ ] HDMI port audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Mini display port
+- [X] Display config toggle (span/cloned/internal/external)
+- [X] Mini display port
 - [ ] Mini display port audio
-- [ ] Display config toggle (span/cloned/internal/external)
-- [ ] Type C DP
+- [X] Display config toggle (span/cloned/internal/external)
+- [X] Type C DP
 - [ ] Type C DP audio
-- [ ] Display config toggle (span/cloned/internal/external)
+- [X] Display config toggle (span/cloned/internal/external)
 - [ ] Dual external display + internal
 - [ ] Dual external display + internal
 - [ ] Triple external display via DP daisy chain + internal
-- [ ] Close internal display. Monitors adjust correctly.
+- [X] Close internal display. Monitors adjust correctly.
 - [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
