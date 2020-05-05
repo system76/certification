@@ -44,6 +44,8 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Ports (Non Display Related)
 
+- [X] Back USB Type A
+- [X] Back USB Type C
 - [X] Left USB Type A
 - [X] Right USB Type A
 - [X] Right USB Type C
@@ -62,19 +64,21 @@ Note: display toggle hotkey is in the displays section below.
 ## Displays
 
 - [X] HDMI port
-- [ ] HDMI port audio
+- [X] HDMI port audio
 - [X] Display config toggle (span/cloned/internal/external)
 - [X] Mini display port
-- [ ] Mini display port audio
+- [X] Mini display port audio
 - [X] Display config toggle (span/cloned/internal/external)
-- [X] Type C DP
-- [ ] Type C DP audio
+- [X] Type C DP (back
+- [X] Type C DP (back) audio
+- [X] Type C DP (right)
+- [X] Type C DP (right) audio
 - [X] Display config toggle (span/cloned/internal/external)
-- [ ] Dual external display + internal
-- [ ] Dual external display + internal
+- [X] Dual external display + internal
+- [X] Dual external display + internal
 - [ ] Triple external display via DP daisy chain + internal
 - [X] Close internal display. Monitors adjust correctly.
-- [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
+- [X] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
 
@@ -83,9 +87,9 @@ Note: display toggle hotkey is in the displays section below.
 ## Network and bluetooth
 
 - [X] Wifi connects with expected performance
-- [ ] Ethernet connects with expected performance
-- [ ] Bluetooth speaker
-- [ ] Bluetooth mic
+- [X] Ethernet connects with expected performance
+- [X] Bluetooth speaker
+- [X] Bluetooth mic
 - [X] Lock machine
 
 ### Network and bluetooth
@@ -95,7 +99,7 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [X] Close lid - system suspends
-- [ ] 150 suspend successful
+- [X] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
