@@ -20,7 +20,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Brightnes Up
 - [x] Camera on/off
 - [x] Airplane Mode
-- [ ] Suspend
+- [x] Suspend
 - [x] Play/Pause
 - [x] Keyboard backlight toggle
 
@@ -61,6 +61,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Display config toggle (span/cloned/internal/external)
 - [x] Dual external display + internal
 - [x] Dual external display + internal
+- [x] Triple external display via DP daisy chain + internal
 - [x] Close internal display. Monitors adjust correctly.
 
 ### Displays notes and issues
@@ -77,7 +78,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Suspend
 
-- [] Close lid - system suspends
+- [x] Close lid - system suspends
 
 ### Suspend notes and issues
-- System not going into suspend on first attempt. Never able to replicate issue (did not try reinstall)
+
