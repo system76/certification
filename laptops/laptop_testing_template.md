@@ -2,7 +2,7 @@
 
 | Test complete | OS Version    | BIOS Version | EC Version | Before or after suspend |
 | ------------- | ------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE    | Pop!\_OS 20.04 | XYZ          | 123        | Before                  |
+| INCOMPLETE      | Pop!\_OS 20.04 | XYZ          | 123        | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -34,9 +34,7 @@ Note: display toggle hotkey is in the displays section below.
 ## Touchpad
 
 - [x] Touchpad two finger scrolling 
-- [ ] Touchpad edge scrolling
 - [ ] Tap to click
-- [ ] Touchpad speed adjustable
 - [ ] Left click
 - [ ] Right click
 
@@ -48,14 +46,17 @@ Note: display toggle hotkey is in the displays section below.
 
 - [x] Left USB Type A
 - [ ] Right USB Type A
+- [ ] Back USB Type A
 - [ ] Left USB Type C
 - [ ] Right USB Type C
+- [ ] Back USB Type C
 - [ ] SD card slot
 - [ ] Headphone jack
 - [ ] Microphone jack
 - [ ] Combo jack headphones
 - [ ] Combo jack mic
 - [ ] Internal mic
+- [ ] Internal speakers
 - [ ] spdif jack
 - [ ] Plugging in headphone or combo jack mutes internal speakers
 
@@ -67,18 +68,14 @@ Note: display toggle hotkey is in the displays section below.
 
 - [x] HDMI port
 - [ ] HDMI port audio
-- [ ] Display config toggle (span/cloned/internal/external)
 - [ ] Mini display port
 - [ ] Mini display port audio
-- [ ] Display config toggle (span/cloned/internal/external)
 - [ ] Type C DP
 - [ ] Type C DP audio
-- [ ] Display config toggle (span/cloned/internal/external)
 - [ ] Dual external display + internal
-- [ ] Dual external display + internal
-- [ ] Triple external display via DP daisy chain + internal
 - [ ] Close internal display. Monitors adjust correctly.
 - [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
+- [ ] Triple external display via DP daisy chain + internal
 
 ### Displays notes and issues
 
@@ -89,7 +86,6 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Wifi connects with expected performance
 - [ ] Ethernet connects with expected performance
 - [ ] Bluetooth speaker
-- [ ] Bluetooth mic
 - [ ] Lock machine
 
 ### Network and bluetooth
