@@ -12,18 +12,11 @@ x = pass | blank = fail | na = remove from list
 - [ ] USB 3 Type A ports
 - [ ] USB 2 Type A ports
 - [ ] USB Type C port(s)
-- [ ] SD card slot
 - [ ] Line out jack
 - [ ] Line in jack
 - [ ] Microphone in jack
-- [ ] Subwoofer out jack
-- [ ] Center speaker out jack
-- [ ] Side speaker out jack
-- [ ] Combo jack headphones
-- [ ] Combo jack mic
-- [ ] Internal mic
+- [ ] Internal mic (meerkat)
 - [ ] spdif jack
-- [ ] Plugging in headphone or combo jack mutes internal speakers
 
 ### Ports notes and issues
 
@@ -52,7 +45,6 @@ x = pass | blank = fail | na = remove from list
 - [ ] Wifi connects with expected performance
 - [ ] Ethernet connects with expected performance
 - [ ] Bluetooth speaker
-- [ ] Bluetooth mic
 - [ ] Lock machine
 
 ### Network and bluetooth
