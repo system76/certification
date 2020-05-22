@@ -59,7 +59,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Ports notes and issues
 
-- No notes
+- No access to miniSD card, awaiting test results from Jeremy
 
 ## Displays
 
@@ -76,7 +76,10 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Displays notes and issues
 
-- No notes
+- audio options for usb-c and mini display port are not shown in 
+  gnome-control-center
+- External display does not show encryption screen, but I do not think it does
+  on a number of System76 laptops
 
 ## Network and bluetooth
 
@@ -93,8 +96,7 @@ Note: display toggle hotkey is in the displays section below.
 
 - [x] Close lid - system suspends
 - [ ] 150 suspend successful
-- [NA] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
 
-- No notes
+- Going to run 150 suspends soon

@@ -59,7 +59,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ### Ports notes and issues
 
-- No notes
+- No access to miniSD card, awaiting test results from Jeremy
 
 ## Displays
 
@@ -72,11 +72,13 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Mini display port audio
 - [x] Dual external display + internal
 - [x] Close internal display. Monitors adjust correctly.
-- [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 
 ### Displays notes and issues
 
-- No notes
+- audio options for usb-c and mini display port are not shown in 
+  gnome-control-center
+- External display does not show encryption screen, but I do not think it does
+  on a number of System76 laptops
 
 ## Network and bluetooth
 
@@ -92,7 +94,6 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [x] Close lid - system suspends
-- [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
 
