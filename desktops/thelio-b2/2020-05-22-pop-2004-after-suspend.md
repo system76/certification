@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ----------------------- |
-| COMPLETE      | Pop!\_OS 20.04 | F3           | Before                  |
+| COMPLETE      | Pop!\_OS 20.04 | F3           | After                   |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list

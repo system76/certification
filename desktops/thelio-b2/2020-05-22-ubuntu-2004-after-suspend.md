@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ----------------------- |
-| COMPLETE      | Pop!\_OS 20.04 | F3           | Before                  |
+| INCOMPLETE    | Ubuntu 20.04   | F3           | After                   |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -48,7 +48,7 @@ x = pass | blank = fail | na = remove from list
 
 ## Suspend
 
-- [x] 150 suspend successful
+- [ ] 150 suspend successful
 
 ### Suspend notes and issues
 
