@@ -48,7 +48,7 @@ x = pass | blank = fail | na = remove from list
 
 ## Suspend
 
-- [ ] 150 suspend successful
+- [x] 150 suspend successful
 
 ### Suspend notes and issues
 
