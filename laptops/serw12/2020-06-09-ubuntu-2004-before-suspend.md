@@ -93,7 +93,7 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [x] Close lid - system suspends
-- [ ] 150 suspend successful
+- [x] 150 suspend successful
 
 ### Suspend notes and issues
 

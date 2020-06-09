@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | EC Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE    | Ubuntu 20.04   | 1.07.02      | 1.07.02    | After                   |
+|   COMPLETE    | Ubuntu 20.04   | 1.07.02      | 1.07.02    | After                   |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -93,7 +93,7 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [x] Close lid - system suspends
-- [ ] 150 suspend successful
+- [x] 150 suspend successful
 
 ### Suspend notes and issues
 
