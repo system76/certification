@@ -100,3 +100,5 @@ Note: display toggle hotkey is in the displays section below.
 - Lid close/open: works while plugged into AC adapter on fresh boot. When on battery, system powers off just after resuming, and does not power back on until AC adapter is plugged in again.
 
 - Depleted battery: system powered itself off entirely. journalctl shows that it tried to enter Suspend+Hibernate.
+
+- `sudo systemctl suspend` sometimes shows the same issue where the system powers off when attempting to resume (from a fresh boot on battery power, it takes two tries to see that issue occur.)
