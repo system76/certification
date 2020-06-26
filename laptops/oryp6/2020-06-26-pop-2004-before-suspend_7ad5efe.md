@@ -95,7 +95,7 @@ Note: display toggle hotkey is in the displays section below.
 
 - [x] Close lid - system suspends
 - [ ] 150 suspend successful (in NVIDIA mode)
-- [x] System prompts and eventually suspends on depleted battery
+- [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
 
