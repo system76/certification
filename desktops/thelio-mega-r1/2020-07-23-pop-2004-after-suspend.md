@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ----------------------- |
-|   COMPLETE    | Pop!\_OS 20.04 | F4g Z5       | Before                  |
+| INCOMPLETE    | Pop!\_OS 20.04 | F4g Z5       | After                   |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -18,7 +18,7 @@ x = pass | blank = fail | na = remove from list
 
 ### Ports notes and issues
 
-- There are two options for S/PDIF USB Audio. One started working when I got a new converter.
+- S/PDIF started working again. My new adapter probably was the ticket.
 - Line in does not work.
 - Mic in seems very quiet even at full volume, but it does work.
 
@@ -38,7 +38,7 @@ x = pass | blank = fail | na = remove from list
 ### Displays notes and issues
 
 - Could not find a DP to USB-C cable to test with. Do not suspect trouble because Nvidia.
-- Tested quad 2080Ti's for Nvidia and a single 5500XT for AMD
+- Tested a rx550 for AMD and a RTX 2060 for Nvidia
 
 ## Network and bluetooth
 
