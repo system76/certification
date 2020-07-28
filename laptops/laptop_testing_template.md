@@ -1,8 +1,8 @@
 ## Test Platform
 
-| Test complete | OS Version    | BIOS Version | EC Version | Before or after suspend |
-| ------------- | ------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE      | Pop!\_OS 20.04 | XYZ          | 123        | Before                  |
+| Test complete | OS Version     | BIOS Version | EC Version | Before or after suspend |
+| ------------- | -------------- | ------------ | ---------- | ----------------------- |
+| INCOMPLETE    | Pop!\_OS 20.04 | XYZ          | 123        | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -11,7 +11,7 @@ x = pass | blank = fail | na = remove from list
 
 Note: display toggle hotkey is in the displays section below.
 
-- [x] Touchpad Lock
+- [ ] Touchpad Lock
 - [ ] Turn off display
 - [ ] Mute sound
 - [ ] Volume down
@@ -33,7 +33,8 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Power button
 
-- [x] External power button is disabled when the lid is closed, the machine is powered off, and not connected to a charger (barrel or USB-C)
+- [ ] External power button is disabled when the lid is closed, the machine is powered off, and not connected to a charger (barrel or USB-C)
+- [ ] External power button is disabled when the lid is closed, the machine is suspended, and not connected to a charger (barrel or USB-C)
 - [ ] External power button turns on the machine when the lid is closed and the barrel charger is connected
 - [ ] External power button turns on the machine when the lid is closed and a USB-C charger is connected
 - [ ] External power button wakes the machine from suspend when the lid is closed and the barrel charger is connected
@@ -45,7 +46,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Touchpad
 
-- [x] Touchpad two finger scrolling 
+- [ ] Touchpad two finger scrolling 
 - [ ] Tap to click
 - [ ] Left click
 - [ ] Right click
@@ -56,7 +57,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Ports (Non Display Related)
 
-- [x] Left USB Type A
+- [ ] Left USB Type A
 - [ ] Right USB Type A
 - [ ] Back USB Type A
 - [ ] Left USB Type C
@@ -78,7 +79,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Displays
 
-- [x] HDMI port
+- [ ] HDMI port
 - [ ] HDMI port audio
 - [ ] Mini display port
 - [ ] Mini display port audio
@@ -106,7 +107,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Suspend
 
-- [x] Close lid - system suspends
+- [ ] Close lid - system suspends
 - [ ] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 

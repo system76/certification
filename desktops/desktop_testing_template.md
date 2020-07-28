@@ -31,9 +31,12 @@ x = pass | blank = fail | na = remove from list
 - [ ] Type C DP
 - [ ] Type C DP audio
 - [ ] Display config toggle (Super + P)
-- [ ] Integrated graphics (AMD / Intel)
+- [ ] Integrated graphics (AMD / Intel) 
+  - [ ] No visible issues playing youtube videos
 - [ ] Discrete AMD graphics card
+  - [ ] No visible issues playing youtube videos
 - [ ] Discrete Nvidia graphics card
+  - [ ] No visible issues playing youtube videos
 - [ ] Multiple GPUs
 
 ### Displays notes and issues
