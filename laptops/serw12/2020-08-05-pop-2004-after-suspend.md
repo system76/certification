@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | EC Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE    | Pop!\_OS 20.04 | 1.07.06      |            |                         |
+| COMPLETE      | Pop!\_OS 20.04 | 1.07.06      | 1.07.02    | Both                    |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -93,11 +93,11 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [X] Close lid - system suspends
-- [ ] 150 suspend successful
+- [X] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
 
 - Once lid has been closed/opened with external displays (which doesn't suspend), closing the lid no longer suspends until the next reboot. This is not specific to this model.
-- Still running the longer-running suspend tasks.
+- When system runs out of battery, it attempts to hibernate to disk, which results in a failed resume once power is restored. That issue is not specific to this model.
 
