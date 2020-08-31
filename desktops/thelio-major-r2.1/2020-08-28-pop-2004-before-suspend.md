@@ -2,7 +2,7 @@
 
 | Test complete | OS Version    | BIOS Version | Before or after suspend |
 | ------------- | ------------- | ------------ | ----------------------- |
-| INCOMPLETE    | Pop!_OS 20.04 | FA Z5        | Before                  |
+| COMPLETE      | Pop!_OS 20.04 | FA Z5        | Both                    |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -13,13 +13,13 @@ x = pass | blank = fail | na = remove from list
 - [x] USB 2 Type A ports
 - [x] USB Type C port(s)
 - [x] Line out jack
-- [ ] Line in jack
-- [ ] Microphone in jack
-- [ ] spdif jack
+- [x] Line in jack
+- [x] Microphone in jack
+- [x] spdif jack
 
 ### Ports notes and issues
 
-- Line in, mic in, and s/pdif are all not working. Probably needs the same fixups as major-r2
+- Sound was fixed after https://github.com/pop-os/system76-driver/pull/162, https://github.com/pop-os/system76-power/pull/188, and https://github.com/pop-os/system76-firmware/pull/36
 
 ## Displays and graphics
 
