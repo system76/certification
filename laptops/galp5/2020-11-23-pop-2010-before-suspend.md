@@ -103,7 +103,7 @@ Note: display toggle hotkey is in the displays section below.
 ## Suspend
 
 - [x] Close lid - system suspends
-- [ ] 150 suspend successful
+- [x] 150 suspend successful
 - [ ] System prompts and eventually suspends on depleted battery
 
 ### Suspend notes and issues
