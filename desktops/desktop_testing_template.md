@@ -37,7 +37,7 @@ x = pass | blank = fail | na = remove from list
   - [ ] No visible issues playing youtube videos
 - [ ] Discrete Nvidia graphics card
   - [ ] No visible issues playing youtube videos
-- [ ] Multiple GPUs
+- [ ] Multiple GPUs (max loadout, if possible)
 
 ### Displays notes and issues
 

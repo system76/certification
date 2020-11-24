@@ -50,6 +50,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Tap to click
 - [ ] Left click
 - [ ] Right click
+- [ ] Middle click (three finger tap/click for clickpads, click both buttons simultaneously for non-clickpad)
 
 ### Touchpad notes and issues
 
