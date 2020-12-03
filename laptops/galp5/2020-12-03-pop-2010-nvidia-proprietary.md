@@ -37,8 +37,8 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Power button
 
-- [ ] External power button is disabled when the lid is closed, the machine is powered off, and not connected to a charger (barrel or USB-C)
-- [ ] External power button is disabled when the lid is closed, the machine is suspended, and not connected to a charger (barrel or USB-C)
+- [X] External power button is disabled when the lid is closed, the machine is powered off, and not connected to a charger (barrel or USB-C)
+- [X] External power button is disabled when the lid is closed, the machine is suspended, and not connected to a charger (barrel or USB-C)
 - [ ] External power button turns on the machine when the lid is closed and the barrel charger is connected
 - [ ] External power button turns on the machine when the lid is closed and a USB-C charger is connected
 - [ ] External power button wakes the machine from suspend when the lid is closed and the barrel charger is connected
@@ -46,7 +46,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Power button notes and issues
 
-- No notes
+- Power button does not work when lid is closed and charger is connected.
 
 ## Touchpad
 
