@@ -118,5 +118,5 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Other notes
 
-- Had one hang at power-off (as soon as I entered the command.)
+- Had multiple hangs at power-off (as soon as I entered the command or clicked the menu entry-- frozen on the desktop.)
 
