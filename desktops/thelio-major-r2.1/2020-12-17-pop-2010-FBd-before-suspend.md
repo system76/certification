@@ -2,7 +2,7 @@
 
 | Test complete | OS Version    | BIOS Version | Before or after suspend |
 | ------------- | ------------- | ------------ | ----------------------- |
-| INCOMPLETE    | Pop!_OS 20.10 | FBd Z5       | Before                  |
+|   COMPLETE    | Pop!_OS 20.10 | FBd Z5       | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -52,7 +52,7 @@ x = pass | blank = fail | na = remove from list
 ## Suspend
 
 - [x] Single suspend successful
-- [ ] 150 suspend successful
+- [x] 150 suspend successful
 
 ### Suspend notes and issues
 
