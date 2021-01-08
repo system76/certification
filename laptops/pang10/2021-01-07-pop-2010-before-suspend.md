@@ -52,7 +52,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Right USB Type C
 - [x] MicroSD card slot
 - [x] Combo jack headphones
-- [ ] Combo jack mic
+- [x] Combo jack mic
 - [x] Internal mic
 - [x] Internal speakers
 - [x] Plugging in headphone or combo jack mutes internal speakers
@@ -60,7 +60,6 @@ Note: display toggle hotkey is in the displays section below.
 ### Ports notes and issues
 
 - MicroSD card goes deep into the case and it's a bit difficult to get a hold of it to remove from the slot
-- Plugging into combo jack does not summon the headphones/headset prompt, and I do not see an input device appear for my combo headset mic.
 
 ## Displays
 
