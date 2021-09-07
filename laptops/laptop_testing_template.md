@@ -106,11 +106,12 @@ Note: display toggle hotkey is in the displays section below.
 
 - No notes
 
-## Suspend
+## Suspend & Power
 
 - [ ] Close lid - system suspends
 - [ ] 150 suspend successful
-- [ ] System prompts and eventually suspends on depleted battery
+- [ ] Perform 20 manual suspends-- keyboard/touchpad are functional on every resume.
+- [ ] Power on while unplugged & run stress command.
 
 ### Suspend notes and issues
 
