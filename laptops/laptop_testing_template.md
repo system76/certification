@@ -51,6 +51,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Left click
 - [ ] Right click
 - [ ] Middle click (three finger tap/click for clickpads, click both buttons simultaneously for non-clickpad)
+- [ ] Four finger swipe up or down changes workspaces
 
 ### Touchpad notes and issues
 
