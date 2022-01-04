@@ -117,3 +117,12 @@ Note: display toggle hotkey is in the displays section below.
 ### Suspend notes and issues
 
 - No notes
+
+## Hardware compatibility
+
+- [ ] System boots and suspends/resumes with SATA drives populated
+- [ ] System boots with both the minimum and maximum supported amounts of RAM
+
+### Hardware compatibility notes and issues
+
+- No notes
