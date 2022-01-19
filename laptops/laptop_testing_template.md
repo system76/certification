@@ -120,8 +120,14 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Hardware compatibility
 
-- [ ] System boots and suspends/resumes with SATA drives populated
-- [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM
+- [ ] RAM
+    - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
+- [ ] Storage
+    - [ ] System boots and suspends/resumes with all possible SATA drives populated
+    - [ ] System boots and suspends/resumes with each of the following drive models (test each one in every possible slot):
+        - [ ] Samsung 970 Evo Plus
+        - [ ] Samsung 980 Pro
+        - [ ] Western Digital Blue SN550
 
 ### Hardware compatibility notes and issues
 
