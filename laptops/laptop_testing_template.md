@@ -128,6 +128,8 @@ Note: display toggle hotkey is in the displays section below.
         - [ ] Samsung 970 Evo Plus (PCIe Gen 3)
         - [ ] Samsung 980 Pro (PCIe Gen 4)
         - [ ] Western Digital Blue SN550 (PCIe Gen 3)
+- [ ] TPM
+    - [ ] `/sys/class/tpm/tpm0` directory exists
 
 ### Hardware compatibility notes and issues
 
