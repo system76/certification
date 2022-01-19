@@ -125,9 +125,9 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Storage
     - [ ] System boots and suspends/resumes with all possible SATA drives populated
     - [ ] System boots and suspends/resumes with each of the following drive models (test each one in every possible slot):
-        - [ ] Samsung 970 Evo Plus
-        - [ ] Samsung 980 Pro
-        - [ ] Western Digital Blue SN550
+        - [ ] Samsung 970 Evo Plus (PCIe Gen 3)
+        - [ ] Samsung 980 Pro (PCIe Gen 4)
+        - [ ] Western Digital Blue SN550 (PCIe Gen 3)
 
 ### Hardware compatibility notes and issues
 
