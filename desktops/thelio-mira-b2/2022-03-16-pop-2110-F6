@@ -25,7 +25,7 @@ x = pass | blank = fail | na = remove from list
 - [x] HDMI port
 - [x] HDMI port audio
 - [x] Display port
-- [ ] Display port audio
+- [x] Display port audio
 - [x] Display config toggle (Super + P)
 - [x] Integrated graphics (AMD / Intel) 
   - [x] No visible issues playing youtube videos
@@ -33,7 +33,6 @@ x = pass | blank = fail | na = remove from list
   - [x] No visible issues playing youtube videos
 - [x] Discrete Nvidia graphics card
   - [x] No visible issues playing youtube videos
-- [ ] Multiple GPUs (max loadout, if possible)
 
 ### Displays notes and issues
 
