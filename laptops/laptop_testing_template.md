@@ -128,6 +128,12 @@ Note: display toggle hotkey is in the displays section below.
         - [ ] Samsung 970 Evo Plus (PCIe Gen 3)
         - [ ] Samsung 980 Pro (PCIe Gen 4)
         - [ ] Western Digital Blue SN550 (PCIe Gen 3)
+        - [ ] Any M.2 SATA drive
+    - [ ] Read and write speeds are within expectations with each of the following drive models (test each one in every possible slot):
+        - [ ] Samsung 970 Evo Plus (PCIe Gen 3)
+        - [ ] Samsung 980 Pro (PCIe Gen 4)
+        - [ ] Western Digital Blue SN550 (PCIe Gen 3)
+        - [ ] Any M.2 SATA drive
 - [ ] TPM
     - [ ] `/sys/class/tpm/tpm0` directory exists
 
