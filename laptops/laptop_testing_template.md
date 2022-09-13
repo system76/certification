@@ -113,6 +113,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] 150 suspend successful
 - [ ] Perform 20 manual suspends-- keyboard/touchpad are functional on every resume.
 - [ ] Power on while unplugged & run stress command.
+- [ ] Laptop charges to full as expected (drain it to ~25% before charging)
 
 ### Suspend notes and issues
 
