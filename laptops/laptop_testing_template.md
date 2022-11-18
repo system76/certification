@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version | EC Version | Before or after suspend |
 | ------------- | -------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE    | Pop!\_OS 20.04 | XYZ          | 123        | Before                  |
+| INCOMPLETE    | Pop!\_OS 22.04 | XYZ          | 123        | Before                  |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -112,6 +112,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Close lid - system suspends
 - [ ] 150 suspend successful
 - [ ] Perform 20 manual suspends-- keyboard/touchpad are functional on every resume.
+- [ ] System stays suspended for 15 minutes on battery power
 - [ ] Power on while unplugged & run stress command.
 - [ ] Laptop charges to full as expected (drain it to ~25% before charging)
 
