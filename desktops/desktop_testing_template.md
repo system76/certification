@@ -50,6 +50,10 @@ x = pass | blank = fail | na = remove from list
 - [ ] Bluetooth speaker
 - [ ] Lock machine
 
+## BIOS settings notes and issues
+
+- [ ] `/dev/kvm` file exists
+
 ### Network and bluetooth
 
 - No notes

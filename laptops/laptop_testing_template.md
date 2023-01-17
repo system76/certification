@@ -138,6 +138,7 @@ Note: display toggle hotkey is in the displays section below.
         - [ ] Any M.2 SATA drive
 - [ ] TPM
     - [ ] `/sys/class/tpm/tpm0` directory exists
+- [ ] KVM `/dev/kvm` file exists
 
 ### Hardware compatibility notes and issues
 
