@@ -91,6 +91,8 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Close internal display. Monitors adjust correctly.
 - [ ] Reboot w/ lid closed. Decryption dialog shows on external display.
 - [ ] Triple external display via DP daisy chain + internal
+- [ ] Laptop boots and logs in to desktop with HDMI monitor connected
+- [ ] Laptop boots and logs in to desktop with DP/USB-C monitor connected
 
 ### Displays notes and issues
 
