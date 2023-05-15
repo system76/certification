@@ -116,6 +116,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Perform 20 manual suspends-- keyboard/touchpad are functional on every resume.
 - [ ] System stays suspended for at least 15 minutes on battery power, then resumes as expected afterwards
 - [ ] Power on while unplugged & run stress command.
+- [ ] Power on while unplugged & build the Linux kernel.
 - [ ] Laptop charges to full as expected (drain it to ~25% before charging)
 
 ### Suspend notes and issues
