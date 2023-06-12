@@ -52,11 +52,21 @@ x = pass | blank = fail | na = remove from list
 - [ ] Bluetooth speaker
 - [ ] Lock machine
 
-## BIOS settings notes and issues
+### Network and bluetooth notes and issues
 
-- [ ] `/dev/kvm` file exists
+- No notes
 
-### Network and bluetooth
+## Hardware and BIOS settings
+
+- [ ] RAM
+    - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
+    - [ ] XMP profiles work on maximum supported RAM config
+- [ ] TPM
+    - [ ] `/sys/class/tpm/tpm0` directory exists
+    - [ ] No TPM errors in dmesg & journalctl logs after 150 suspends
+- [ ] KVM `/dev/kvm` file exists
+
+### Hardware and BIOS settings notes and issues
 
 - No notes
 

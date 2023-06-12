@@ -141,6 +141,7 @@ Note: display toggle hotkey is in the displays section below.
         - [ ] Any M.2 SATA drive
 - [ ] TPM
     - [ ] `/sys/class/tpm/tpm0` directory exists
+    - [ ] No TPM errors in dmesg & journalctl logs after 150 suspends
 - [ ] KVM `/dev/kvm` file exists
 
 ### Hardware compatibility notes and issues
