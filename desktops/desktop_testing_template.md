@@ -60,7 +60,7 @@ x = pass | blank = fail | na = remove from list
 
 - [ ] RAM
     - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
-    - [ ] XMP profiles work on maximum supported RAM config
+    - [ ] XMP profiles work on maximum speed and capacity supported RAM config (that we will offer)
 - [ ] TPM
     - [ ] `/sys/class/tpm/tpm0` directory exists
     - [ ] No TPM errors in dmesg & journalctl logs after 150 suspends
