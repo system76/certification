@@ -118,6 +118,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Power on while unplugged & run stress command.
 - [ ] Power on while unplugged & build the Linux kernel.
 - [ ] Laptop charges to full as expected (drain it to ~25% before charging)
+- [ ] Laptop reaches at least a C8 power state after idling for ~10 minutes (in `powertop`, in the "Idle stats" tab, the `Pkg(HW)` column should have a C8 percentage >0%)
 
 ### Suspend notes and issues
 
