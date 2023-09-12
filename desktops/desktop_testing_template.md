@@ -17,6 +17,11 @@ x = pass | blank = fail | na = remove from list
 - [ ] Microphone in jack
 - [ ] Internal mic (meerkat)
 - [ ] spdif jack
+- [ ] Front IO ports:
+  - [ ] USB-A
+  - [ ] USB-C
+  - [ ] Mic in
+  - [ ] Line out
 
 ### Ports notes and issues
 
