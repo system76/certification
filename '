@@ -1,0 +1,75 @@
+# Test Platform
+
+| Test complete | OS Version     | BIOS Version | Before or after suspend |
+| ------------- | -------------- | ------------ | ----------------------- |
+|   COMPLETE    | Pop!\_OS 22.04 | F22b Z5      | Both                    |
+
+## Checklist
+
+x = pass | blank = fail | na = remove from list
+
+## Ports (Non Display Related)
+
+- [x] USB 3 Type A ports
+- [x] USB 2 Type A ports
+- [x] USB Type C port(s)
+- [ ] Line out jack
+- [ ] Line in jack
+- [ ] Microphone in jack
+
+### Ports notes and issues
+
+- No notes
+
+## Displays and graphics
+
+- [ ] HDMI port
+- [ ] HDMI port audio
+- [ ] Display config toggle (Super + P)
+- [ ] Integrated graphics (AMD / Intel)
+  - [ ] No visible issues playing youtube videos
+- [ ] Discrete AMD graphics card
+  - [ ] No visible issues playing youtube videos
+- [ ] Discrete Nvidia graphics card
+  - [ ] No visible issues playing youtube videos
+- [ ] Discrete Intel graphics card
+  - [ ] No visible issues playing youtube videos
+- [ ] Multiple GPUs (max loadout, if possible)
+
+### Displays notes and issues
+
+- No notes
+
+## Network and bluetooth
+
+- [x] Wifi connects with expected performance
+- [x] Ethernet connects with expected performance
+- [ ] Bluetooth speaker
+- [x] Lock machine
+
+### Network and bluetooth notes and issues
+
+- No notes
+
+## Hardware and BIOS settings
+
+- [ ] RAM
+    - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
+    - [ ] XMP profiles work on maximum speed and capacity supported RAM config (that we will offer)
+- [ ] TPM
+    - [ ] `/sys/class/tpm/tpm0` directory exists
+    - [x] No TPM errors in dmesg & journalctl logs after 150 suspends
+- [ ] KVM `/dev/kvm` file exists
+
+### Hardware and BIOS settings notes and issues
+
+- No notes
+
+## Suspend
+
+- [x] 150 suspend successful
+
+### Suspend notes and issues
+
+- No notes
+
