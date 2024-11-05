@@ -12,6 +12,8 @@ x = pass | blank = fail | na = remove from list
 - [ ] USB 3 Type A ports
 - [ ] USB 2 Type A ports
 - [ ] USB Type C port(s)
+- [ ] Thunderbolt devices plugged in before suspend do not block suspend
+- [ ] Thunderbolt devices plugged in during suspend do not block resume
 - [ ] Line out jack
 - [ ] Line in jack
 - [ ] Microphone in jack

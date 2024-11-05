@@ -65,6 +65,8 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Left USB Type C
 - [ ] Right USB Type C
 - [ ] Back USB Type C
+- [ ] Thunderbolt devices plugged in before suspend do not block suspend
+- [ ] Thunderbolt devices plugged in during suspend do not block resume
 - [ ] SD card slot
 - [ ] Headphone jack
 - [ ] Microphone jack
