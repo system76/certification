@@ -1,8 +1,8 @@
 ## Test Platform
 
-| Test complete | OS Version     | BIOS Version | EC Version | Before or after suspend |
-| ------------- | -------------- | ------------ | ---------- | ----------------------- |
-| INCOMPLETE    | Pop!\_OS 22.04 | XYZ          | 123        | Before                  |
+| Test complete | OS Version     | BIOS Version | EC Version |
+| ------------- | -------------- | ------------ | ---------- |
+| INCOMPLETE    | Pop!\_OS 22.04 | XYZ          | 123        |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -46,7 +46,7 @@ Note: display toggle hotkey is in the displays section below.
 
 ## Touchpad
 
-- [ ] Touchpad two finger scrolling 
+- [ ] Touchpad two finger scrolling
 - [ ] Tap to click
 - [ ] Left click
 - [ ] Right click
@@ -68,6 +68,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Thunderbolt devices plugged in before suspend do not block suspend
 - [ ] Thunderbolt devices plugged in during suspend do not block resume
 - [ ] SD card slot
+- [ ] Kensington lock slot
 - [ ] Headphone jack
 - [ ] Microphone jack
 - [ ] Combo jack headphones
