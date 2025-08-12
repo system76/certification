@@ -130,8 +130,9 @@ Note: display toggle hotkey is in the displays section below.
 ## Hardware compatibility
 
 - [ ] RAM
-    - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
+    - [ ] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs (make sure to test with no SODIMMs if system has some integrated RAM, e.g. Lemur Pro)
     - [ ] Speed of highest frequency RAM supported is correctly reported in `dmidecode -t 17`
+    - [ ] CSODIMMs boot, suspend/resume, and run at full speed
 - [ ] Storage
     - [ ] System boots and suspends/resumes with all possible SATA drives populated
     - [ ] System boots and suspends/resumes with each of the following drive models (test each one in every possible slot):
