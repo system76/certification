@@ -67,6 +67,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Back USB Type C
 - [ ] Thunderbolt devices plugged in before suspend do not block suspend
 - [ ] Thunderbolt devices plugged in during suspend do not block resume
+- [ ] Thunderbolt devices plugged in before power on POST and boot to OS.
 - [ ] SD card slot
 - [ ] Kensington lock slot
 - [ ] Headphone jack
