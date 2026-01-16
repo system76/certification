@@ -1,0 +1,133 @@
+## Test Platform
+
+| Test complete | OS Version     | BIOS Version       | EC Version |
+|---------------|----------------|--------------------|------------|
+| INCOMPLETE    | Pop!\_OS 24.04 | 1.07.07BIOS\_GUARD | 1.07.06MI1 |
+
+## Checklist
+x = pass | blank = fail | na = remove from list
+
+## Hot Keys
+
+Note: display toggle hotkey is in the displays section below.
+
+- [x] Touchpad Lock
+- [ ] Mic mute hotkey
+- [x] Mute sound
+- [x] Volume down
+- [x] Volume up
+- [x] Brightness Down
+- [x] Brightnes Up
+- [x] Camera on/off
+- [x] Airplane Mode
+- [x] Suspend
+- [x] Play/Pause
+- [ ] Keyboard backlight on/off
+- [ ] Keyboard backlight brightness up
+- [ ] Keyboard backlight brightness down
+- [ ] Keyboard backlight toggle colors
+- [x] Fn + 1 fan mode toggle
+
+### Hot key notes and issues
+
+- Mic mute isn't doing LCD toggle anymore, but it's not really doing anything at all.
+- DKMS fix for keyboard backlight is merged, but the build server is super backed up after its outage so I can't install it yet. It worked the last time I tested it though, so I'm not concerned.
+
+## Touchpad
+
+- [x] Touchpad two finger scrolling
+- [x] Tap to click
+- [x] Left click
+- [x] Right click
+- [x] Middle click (three finger tap/click for clickpads, click both buttons simultaneously for non-clickpad)
+- [x] Four finger swipe up or down changes workspaces
+
+### Touchpad notes and issues
+
+- No notes
+
+## Ports (Non Display Related)
+
+- [x] Left USB Type A
+- [x] Right USB Type A 3.0
+- [x] Right USB Type A 2.0
+- [x] Right USB Type C
+- [x] Kensington lock slot
+- [x] Combo jack headphones
+- [x] Combo jack mic
+- [x] Internal mic
+- [x] Internal speakers
+- [x] Plugging in headphone or combo jack mutes internal speakers
+
+### Ports notes and issues
+
+- No notes
+
+## Displays
+
+- [x] HDMI port
+- [x] HDMI port audio
+- [x] Mini display port
+- [x] Mini display port audio
+- [x] Type C DP
+- [x] Type C DP audio
+- [x] Dual external display + internal
+- [x] Close internal display. Monitors adjust correctly.
+- [x] Reboot w/ lid closed. Decryption dialog shows on external display.
+- [x] Triple external display via DP daisy chain + internal
+- [x] Laptop boots and logs in to desktop with HDMI monitor connected
+- [x] Laptop boots and logs in to desktop with DP monitor connected
+- [ ] Laptop boots and logs in to desktop with USB-C monitor connected
+
+### Displays notes and issues
+
+- Decryption dialog shows on MiniDP and USB-C, but not on HDMI
+
+## Network and bluetooth
+
+- [x] Wifi connects with expected performance
+- [x] Ethernet connects with expected performance
+- [x] Bluetooth speaker
+- [x] Lock machine
+
+### Network and bluetooth
+
+- No notes
+
+## Suspend & Power
+
+- [x] Close lid - system suspends
+- [x] 150 suspend successful
+- [x] Perform 20 manual suspends-- keyboard/touchpad are functional on every resume.
+- [x] System stays suspended for at least 15 minutes on battery power, then resumes as expected afterwards
+- [x] Power on while unplugged & run stress command.
+- [x] Power on while unplugged & build the Linux kernel.
+- [x] Laptop charges to full as expected (drain it to ~25% before charging)
+- [ ] Laptop reaches at least a C8 power state after idling for ~10 minutes (in `powertop`, in the "Idle stats" tab, the `Pkg(HW)` column should have a C8 percentage >0%)
+
+### Suspend notes and issues
+
+- Highest power state it achieves is C3
+
+## Hardware compatibility
+
+- [x] RAM
+    - [x] System boots and suspends/resumes with both the minimum and maximum supported amounts of RAM/DIMMs
+    - [x] Speed of highest frequency RAM supported is correctly reported in `dmidecode -t 17`
+- [x] Storage
+    - [x] System boots and suspends/resumes with each of the following drive models (test each one in every possible slot):
+        - [x] Samsung 970 Evo Plus (PCIe Gen 3)
+        - [x] Western Digital Green SN350 (PCIe Gen 3)
+        - [x] Crucial P3 Plus (PCIe Gen 4)
+    - [x] Read and write speeds are within expectations with each of the following drive models (test each one in every possible slot):
+        - [x] Samsung 970 Evo Plus (PCIe Gen 3)
+        - [x] Western Digital Green SN350 (PCIe Gen 3)
+        - [x] Crucial P3 Plus (PCIe Gen 4)
+- [x] TPM
+    - [x] `/sys/class/tpm/tpm0` directory exists
+    - [x] No TPM errors in dmesg & journalctl logs after 150 suspends
+- [x] KVM `/dev/kvm` file exists
+
+### Hardware compatibility notes and issues
+
+- 6400MHz CSODIMMs are unsupported.
