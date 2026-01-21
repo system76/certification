@@ -2,7 +2,7 @@
 
 | Test complete | OS Version     | BIOS Version       | EC Version |
 |---------------|----------------|--------------------|------------|
-| INCOMPLETE    | Pop!\_OS 24.04 | 1.07.07BIOS\_GUARD | 1.07.06MI1 |
+| COMPLETE      | Pop!\_OS 24.04 | 1.07.07BIOS\_GUARD | 1.07.06MI1 |
 
 ## Checklist
 x = pass | blank = fail | na = remove from list
@@ -12,7 +12,7 @@ x = pass | blank = fail | na = remove from list
 Note: display toggle hotkey is in the displays section below.
 
 - [x] Touchpad Lock
-- [ ] Mic mute hotkey
+- [x] Mic mute hotkey
 - [x] Mute sound
 - [x] Volume down
 - [x] Volume up
@@ -22,16 +22,15 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Airplane Mode
 - [x] Suspend
 - [x] Play/Pause
-- [ ] Keyboard backlight on/off
-- [ ] Keyboard backlight brightness up
-- [ ] Keyboard backlight brightness down
-- [ ] Keyboard backlight toggle colors
+- [x] Keyboard backlight on/off
+- [x] Keyboard backlight brightness up
+- [x] Keyboard backlight brightness down
+- [x] Keyboard backlight toggle colors
 - [x] Fn + 1 fan mode toggle
 
 ### Hot key notes and issues
 
-- Mic mute isn't doing LCD toggle anymore, but it's not really doing anything at all.
-- DKMS fix for keyboard backlight is merged, but the build server is super backed up after its outage so I can't install it yet. It worked the last time I tested it though, so I'm not concerned.
+- No notes
 
 ## Touchpad
 
@@ -77,7 +76,7 @@ Note: display toggle hotkey is in the displays section below.
 - [x] Triple external display via DP daisy chain + internal
 - [x] Laptop boots and logs in to desktop with HDMI monitor connected
 - [x] Laptop boots and logs in to desktop with DP monitor connected
-- [ ] Laptop boots and logs in to desktop with USB-C monitor connected
+- [x] Laptop boots and logs in to desktop with USB-C monitor connected
 
 ### Displays notes and issues
 
