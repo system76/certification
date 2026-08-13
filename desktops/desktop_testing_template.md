@@ -1,11 +1,23 @@
-## Test Platform
+# Test Platform
 
 | Test complete | OS Version    | BIOS Version | Before or after suspend |
 | ------------- | ------------- | ------------ | ----------------------- |
 | INCOMPLETE    |               |              |                         |
 
 ## Checklist
+
 x = pass | blank = fail | na = remove from list
+
+## DMI Values
+
+- [ ] BIOS Information matches expected values
+- [ ] System Information matches expected values
+- [ ] Base Board Information matches expected values
+- [ ] Chassis Information matches expected values
+
+### DMI Values notes and issues
+
+- No notes
 
 ## Ports (Non Display Related)
 
@@ -38,7 +50,7 @@ x = pass | blank = fail | na = remove from list
 - [ ] Type C DP
 - [ ] Type C DP audio
 - [ ] Display config toggle (Super + P)
-- [ ] Integrated graphics (AMD / Intel) 
+- [ ] Integrated graphics (AMD / Intel)
   - [ ] No visible issues playing youtube videos
 - [ ] Discrete AMD graphics card
   - [ ] No visible issues playing youtube videos

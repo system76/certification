@@ -1,11 +1,23 @@
-## Test Platform
+# Test Platform
 
 | Test complete | OS Version     | BIOS Version | EC Version |
 | ------------- | -------------- | ------------ | ---------- |
 | INCOMPLETE    | Pop!\_OS 22.04 | XYZ          | 123        |
 
 ## Checklist
+
 x = pass | blank = fail | na = remove from list
+
+## DMI Values
+
+- [ ] BIOS Information matches expected values
+- [ ] System Information matches expected values
+- [ ] Base Board Information matches expected values
+- [ ] Chassis Information matches expected values
+
+### DMI Values notes and issues
+
+- No notes
 
 ## Hot Keys
 
@@ -40,7 +52,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] External power button wakes the machine from suspend when the lid is closed and the barrel charger is connected
 - [ ] External power button wakes the machine from suspend when the lid is closed and a USB-C charger is connected
 
-## Power button notes and issues
+### Power button notes and issues
 
 - No notes
 
@@ -109,7 +121,7 @@ Note: display toggle hotkey is in the displays section below.
 - [ ] Bluetooth speaker
 - [ ] Lock machine
 
-### Network and bluetooth
+### Network and bluetooth notes and issues
 
 - No notes
 
